@@ -12,6 +12,7 @@
 		54522E522091B7D8007E9B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54522E502091B7D8007E9B62 /* Main.storyboard */; };
 		54522E542091B7D8007E9B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54522E532091B7D8007E9B62 /* Assets.xcassets */; };
 		54522E572091B7D8007E9B62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54522E552091B7D8007E9B62 /* LaunchScreen.storyboard */; };
+		54D6F8202099994300408627 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F81F2099994300408627 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		54522E532091B7D8007E9B62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54522E562091B7D8007E9B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54522E582091B7D8007E9B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54D6F81F2099994300408627 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				54522E4C2091B7D8007E9B62 /* AppDelegate.swift */,
 				54522E4E2091B7D8007E9B62 /* ViewController.swift */,
 				54522E502091B7D8007E9B62 /* Main.storyboard */,
+				54D6F81F2099994300408627 /* NoteViewController.swift */,
 				54522E532091B7D8007E9B62 /* Assets.xcassets */,
 				54522E552091B7D8007E9B62 /* LaunchScreen.storyboard */,
 				54522E582091B7D8007E9B62 /* Info.plist */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54522E4F2091B7D8007E9B62 /* ViewController.swift in Sources */,
+				54D6F8202099994300408627 /* NoteViewController.swift in Sources */,
 				54522E4D2091B7D8007E9B62 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
