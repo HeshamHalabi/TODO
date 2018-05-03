@@ -12,8 +12,11 @@
 		54522E522091B7D8007E9B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54522E502091B7D8007E9B62 /* Main.storyboard */; };
 		54522E542091B7D8007E9B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54522E532091B7D8007E9B62 /* Assets.xcassets */; };
 		54522E572091B7D8007E9B62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54522E552091B7D8007E9B62 /* LaunchScreen.storyboard */; };
-		54D6F8202099994300408627 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F81F2099994300408627 /* NoteViewController.swift */; };
+		54743C9F209B88D000D470EA /* ShowNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54743C9E209B88D000D470EA /* ShowNoteViewController.swift */; };
+		54D6F8202099994300408627 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F81F2099994300408627 /* AddNoteViewController.swift */; };
 		54D6F8242099A03700408627 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8232099A03700408627 /* Note.swift */; };
+		54D6F8262099C39B00408627 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8252099C39B00408627 /* CategoryViewController.swift */; };
+		54D6F8282099C8CD00408627 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8272099C8CD00408627 /* NotesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +27,11 @@
 		54522E532091B7D8007E9B62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54522E562091B7D8007E9B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54522E582091B7D8007E9B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54D6F81F2099994300408627 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		54743C9E209B88D000D470EA /* ShowNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNoteViewController.swift; sourceTree = "<group>"; };
+		54D6F81F2099994300408627 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddNoteViewController.swift; path = ../AddNoteViewController.swift; sourceTree = "<group>"; };
 		54D6F8232099A03700408627 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		54D6F8252099C39B00408627 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		54D6F8272099C8CD00408627 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +67,10 @@
 				54522E4C2091B7D8007E9B62 /* AppDelegate.swift */,
 				54522E4E2091B7D8007E9B62 /* ViewController.swift */,
 				54522E502091B7D8007E9B62 /* Main.storyboard */,
-				54D6F81F2099994300408627 /* NoteViewController.swift */,
+				54743C9E209B88D000D470EA /* ShowNoteViewController.swift */,
+				54D6F8252099C39B00408627 /* CategoryViewController.swift */,
+				54D6F8272099C8CD00408627 /* NotesViewController.swift */,
+				54D6F81F2099994300408627 /* AddNoteViewController.swift */,
 				54522E532091B7D8007E9B62 /* Assets.xcassets */,
 				54522E552091B7D8007E9B62 /* LaunchScreen.storyboard */,
 				54522E582091B7D8007E9B62 /* Info.plist */,
@@ -142,10 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D6F8262099C39B00408627 /* CategoryViewController.swift in Sources */,
 				54522E4F2091B7D8007E9B62 /* ViewController.swift in Sources */,
-				54D6F8202099994300408627 /* NoteViewController.swift in Sources */,
+				54D6F8282099C8CD00408627 /* NotesViewController.swift in Sources */,
+				54D6F8202099994300408627 /* AddNoteViewController.swift in Sources */,
 				54522E4D2091B7D8007E9B62 /* AppDelegate.swift in Sources */,
 				54D6F8242099A03700408627 /* Note.swift in Sources */,
+				54743C9F209B88D000D470EA /* ShowNoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
