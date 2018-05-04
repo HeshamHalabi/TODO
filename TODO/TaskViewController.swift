@@ -17,6 +17,23 @@ class TaskViewController: UITableViewController {
     // category
     var category: Category!
     
+    // MARK: fetchedResultsController
+    lazy var fetchedResultsController: NSFetchedResultsController<Task> = {
+        // fetch request
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        let predicate = NSPredicate(format: "category == %@", category)
+        fetchRequest.predicate = predicate
+        // sort descriptors
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        // fetch request batch size
+        fetchRequest.fetchBatchSize = 20
+        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.dataController.viewContext, sectionNameKeyPath: nil, cacheName: "Tasks")
+        
+        fetchedResultsController.delegate = self
+        return fetchedResultsController
+    }()
 //    // new note added
 //    var newNote: Task? {
 //        didSet {
@@ -39,17 +56,12 @@ class TaskViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         
-        // MARK: fetch tasks from core data
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        let predicate = NSPredicate(format: "category == %@", category)
-        fetchRequest.predicate = predicate
-        
-        if let result = try? dataController.viewContext.fetch(fetchRequest) {
-            tasks = result
+        // fetch using fetchedResultsController
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError(error.localizedDescription)
         }
-        // reload table view
-        tableView.reloadData()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,15 +76,17 @@ class TaskViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        // Configure the cell...
-        cell.textLabel?.text  = tasks[indexPath.row].title
+        let task = fetchedResultsController.object(at: indexPath)
+        // Configure the cell
+        cell.textLabel?.text  = task.title
         return cell
     }
     
@@ -91,11 +105,9 @@ class TaskViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             // TODO: delete from core data
-            let taskToDelete = tasks[indexPath.row]
+            let taskToDelete = fetchedResultsController.object(at: indexPath)
             dataController.viewContext.delete(taskToDelete)
             try? dataController.viewContext.save()
-            tasks.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -131,13 +143,60 @@ class TaskViewController: UITableViewController {
         } else if segue.identifier == "ShowNote" {
             if let vc = segue.destination as? ShowTaskViewController {
                 if let selectedIndex = tableView.indexPathForSelectedRow {
-                    vc.task = tasks[selectedIndex.row]
+                    vc.task = fetchedResultsController.object(at: selectedIndex)
                 }
             }
         }
         
     }
     
-
+    // MARK: deinit
+    deinit {
+        fetchedResultsController.delegate = nil
+    }
     
+}
+
+// MARK: Extension for fetchedResultsControllerDelegate
+extension TaskViewController: NSFetchedResultsControllerDelegate {
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+        case .insert:
+            guard let newIndexPath = newIndexPath else {
+                fatalError("New index path is nil")
+            }
+            
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        case .delete:
+            guard let indexPath = indexPath else {
+                fatalError("Index path is nil")
+            }
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        case .move:
+            guard let newIndexPath = newIndexPath,
+                let indexPath = indexPath else {
+                    fatalError("Index path or new index path is nil?")
+            }
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        case .update:
+            guard let indexPath = indexPath else {
+                fatalError("Index path is nil")
+            }
+            
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+    }
+
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
 }
