@@ -12,10 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    // DataController
+    let dataController = DataController(modelName: "TODO")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // load persistent store
+        dataController.load {
+            // update the main UI
+        }
+        
+        // pass dataController to category controller
+        let tabBarNavigationController = window?.rootViewController as! UITabBarController
+        let navigationViewController = tabBarNavigationController.viewControllers![0] as! UINavigationController
+        let categotyViewController = navigationViewController.viewControllers[0] as! CategoryViewController
+        categotyViewController.dataController = dataController
+        
+        
         return true
     }
 

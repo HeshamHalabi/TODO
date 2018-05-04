@@ -10,6 +10,9 @@ import UIKit
 
 class CategoryViewController: UITableViewController {
 
+    // dataController
+    var dataController: DataController!
+    
     // array test for filling the table
     var category = ["Home", "School", "Shopping"]
     
