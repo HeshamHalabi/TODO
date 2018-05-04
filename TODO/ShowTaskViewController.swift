@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ShowNoteViewController: UIViewController {
+class ShowTaskViewController: UIViewController {
 
-    var note: String?
+    var task: Task?
+    
+    // outlets
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var dueDateLabel: UILabel!
+    @IBOutlet weak var reminderDateLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +25,19 @@ class ShowNoteViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // test reciving a note
-        if let note = note {
-            print("Successfully receiving a note: \(note)")
+        if let task = task {
+            print("Successfully receiving a note: \(task.title)")
+        }
+        // filling the view with task data
+        titleLabel?.text = task?.title
+        if let details = task?.details {
+            descriptionTextView.text = details
+        }
+        if let dueDate = task?.dueDate {
+            dueDateLabel?.text = "\(dueDate)"
+        }
+        if let reminderDate = task?.reminderDate {
+            reminderDateLabel?.text = "\(reminderDate)"
         }
     }
 

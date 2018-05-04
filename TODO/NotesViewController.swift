@@ -129,9 +129,9 @@ class NotesViewController: UITableViewController {
                 vc.dataController = dataController
             }
         } else if segue.identifier == "ShowNote" {
-            if let vc = segue.destination as? ShowNoteViewController {
+            if let vc = segue.destination as? ShowTaskViewController {
                 if let selectedIndex = tableView.indexPathForSelectedRow {
-                    vc.note = tasks[selectedIndex.row].title
+                    vc.task = tasks[selectedIndex.row]
                 }
             }
         }
