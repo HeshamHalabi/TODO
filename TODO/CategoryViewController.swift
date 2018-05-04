@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CategoryViewController: UITableViewController {
 
@@ -14,7 +15,7 @@ class CategoryViewController: UITableViewController {
     var dataController: DataController!
     
     // array test for filling the table
-    var category = ["Home", "School", "Shopping"]
+    var category: [Category] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,17 @@ class CategoryViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        
+        // MARK: Adding and fetching from core data
+        // add category
+//        addCategory()
+        // fetch request
+        let fetchRequest: NSFetchRequest<Category> = Category.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        if let result = try? dataController.viewContext.fetch(fetchRequest) {
+            category = result
+            tableView.reloadData()
+        }
         
         
     }
@@ -35,7 +46,12 @@ class CategoryViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // MARK: Add random category for test
+    func addCategory() {
+        let category = Category(context: dataController.viewContext)
+        category.name = "Random02"
+        try? dataController.viewContext.save()
+    }
 
     // MARK: - Table view data source
 
@@ -54,7 +70,7 @@ class CategoryViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = category[indexPath.row]
+        cell.textLabel?.text = category[indexPath.row].name
 
         return cell
     }
@@ -74,6 +90,10 @@ class CategoryViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             //TODO: Delete from CoreData
+            let categoryToDelete = category[indexPath.row]
+            dataController.viewContext.delete(categoryToDelete)
+            try? dataController.viewContext.save()
+            
             category.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -106,6 +126,7 @@ class CategoryViewController: UITableViewController {
             if let selectedIndex = tableView.indexPathForSelectedRow {
                 vc.category = category[selectedIndex.row]
                 // TODO: pass core data reference
+                vc.dataController = dataController
             }
         }
     }

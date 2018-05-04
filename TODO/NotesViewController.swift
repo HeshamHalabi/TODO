@@ -7,34 +7,27 @@
 //
 
 import UIKit
+import CoreData
 
 class NotesViewController: UITableViewController {
 
-    // category
-    var category: String! {
-        didSet {
-            notes.append(category)
-        }
-    }
+    // data controller
+    var dataController: DataController!
     
-    // new note added
-    var newNote: String? {
-        didSet {
-            // TODO: Add note to array and dave to context
-            print("new value observed!")
-            print("new value : \(newNote!)")
-            notes.append(newNote!)
-            
-            for item in notes {
-                print(item)
-            }
-            
-            // reload table view
-            tableView.reloadData()
-        }
-    }
+    // category
+    var category: Category!
+    
+//    // new note added
+//    var newNote: Task? {
+//        didSet {
+//            // TODO: Add note to array and dave to context
+//            tasks.append(newNote!)
+//            // reload table view
+//            tableView.reloadData()
+//        }
+//    }
     // test of array for filling table
-    var notes = ["Note01", "Note02", "Note03"]
+    var tasks: [Task] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +38,17 @@ class NotesViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        
+        // MARK: fetch tasks from core data
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        let predicate = NSPredicate(format: "category == %@", category)
+        fetchRequest.predicate = predicate
+        
+        if let result = try? dataController.viewContext.fetch(fetchRequest) {
+            tasks = result
+        }
+        // reload table view
+        tableView.reloadData()
         
     }
 
@@ -60,7 +64,7 @@ class NotesViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        return tasks.count
     }
 
     
@@ -68,7 +72,7 @@ class NotesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text  = notes[indexPath.row]
+        cell.textLabel?.text  = tasks[indexPath.row].title
         return cell
     }
     
@@ -87,7 +91,10 @@ class NotesViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             // TODO: delete from core data
-            notes.remove(at: indexPath.row)
+            let taskToDelete = tasks[indexPath.row]
+            dataController.viewContext.delete(taskToDelete)
+            try? dataController.viewContext.save()
+            tasks.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -118,11 +125,13 @@ class NotesViewController: UITableViewController {
         if segue.identifier == "AddNewNote" {
             if let vc = segue.destination as? AddNoteViewController {
                 vc.isEdit = false
+                vc.category = category
+                vc.dataController = dataController
             }
         } else if segue.identifier == "ShowNote" {
             if let vc = segue.destination as? ShowNoteViewController {
                 if let selectedIndex = tableView.indexPathForSelectedRow {
-                    vc.note = notes[selectedIndex.row]
+                    vc.note = tasks[selectedIndex.row].title
                 }
             }
         }

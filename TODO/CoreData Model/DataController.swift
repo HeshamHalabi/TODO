@@ -25,7 +25,26 @@ class DataController {
             guard error == nil else {
                 fatalError(error!.localizedDescription)
             }
-                
+            // auto save context
+            self.autoSaveViewController()
+        }
+    }
+}
+
+extension DataController {
+    
+    func autoSaveViewController(interval: TimeInterval = 30) {
+        print("autoSaveContext")
+        guard interval > 0 else {
+            print("Can not use negative numbers as time interval")
+            return
+        }
+        if viewContext.hasChanges {
+            try? viewContext.save()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
+            self.autoSaveViewController(interval: interval)
         }
     }
 }

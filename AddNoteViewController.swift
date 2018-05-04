@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class AddNoteViewController: UIViewController {
 
+    // data controller
+    var dataController: DataController!
+    
+    var category: Category!
+    
     // Add or Edit
     var isEdit = false
     
@@ -67,33 +73,41 @@ class AddNoteViewController: UIViewController {
     
     @IBAction func done(_ sender: UIBarButtonItem) {
         // TODO: Create new note or save edits
-        var newNote: Note?
+        var newTask: Task?
         if !isEdit, let title = titleTextField.text, !title.isEmpty {
-             newNote = Note(title: title)
+            
+            newTask = Task(context: dataController.viewContext)
+            newTask?.category = category
+            newTask?.title = title
             // get other fields
             if let details = detailsTextView.text {
-                newNote?.details = details
+                newTask?.details = details
             }
             if !dueDatePicker.isHidden {
-                newNote?.dueDate = dueDatePicker.date
+                // TODO: check the effect of converting to NSDate
+                newTask?.dueDate = dueDatePicker.date as NSDate
             }
             if !reminderDatePicker.isHidden {
-                newNote?.reminderDate = reminderDatePicker.date
+                newTask?.reminderDate = reminderDatePicker.date as NSDate
             }
             
-            // pass the new note to the Notes View Controller
-            if let presentingVC = presentingViewController as? UITabBarController {
-                if let navVC = presentingVC.viewControllers?[0] as? UINavigationController {
-                    print("\(navVC.description)")
-                    if let lastVC = navVC.viewControllers.last as? NotesViewController {
-                        print("\(lastVC.description)")
-                        // pass the new note
-                        lastVC.newNote = newNote?.title
-                        dismiss(animated: true, completion: nil)
-                    }
-                }
-                
-            }
+            // TODO: Save changes in context and dismiss
+            try? dataController.viewContext.save()
+            dismiss(animated: true, completion: nil)
+            //
+//            // pass the new note to the Notes View Controller
+//            if let presentingVC = presentingViewController as? UITabBarController {
+//                if let navVC = presentingVC.viewControllers?[0] as? UINavigationController {
+//                    print("\(navVC.description)")
+//                    if let lastVC = navVC.viewControllers.last as? NotesViewController {
+//                        print("\(lastVC.description)")
+//                        // pass the new note
+//                        lastVC.newNote = newNote?.title
+//                        dismiss(animated: true, completion: nil)
+//                    }
+//                }
+//
+//            }
             
    
             
