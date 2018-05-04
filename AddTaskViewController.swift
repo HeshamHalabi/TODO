@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AddNoteViewController: UIViewController {
+class AddTaskViewController: UIViewController {
 
     // data controller
     var dataController: DataController!

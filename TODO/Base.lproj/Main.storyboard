@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Note View Controller-->
+        <!--Add Task View Controller-->
         <scene sceneID="3Pp-RV-2Eb">
             <objects>
-                <viewController id="F4m-ER-vap" customClass="AddNoteViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="F4m-ER-vap" customClass="AddTaskViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tPZ-lA-Fut">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,7 +284,7 @@
         <!--Notes View Controller-->
         <scene sceneID="Xdq-ec-WIY">
             <objects>
-                <tableViewController storyboardIdentifier="NotesViewController" id="lhZ-Gc-Kst" userLabel="Notes View Controller" customClass="NotesViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NotesViewController" id="lhZ-Gc-Kst" userLabel="Notes View Controller" customClass="TaskViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GZu-JU-sk9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

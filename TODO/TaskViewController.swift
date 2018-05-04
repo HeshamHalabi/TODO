@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class NotesViewController: UITableViewController {
+class TaskViewController: UITableViewController {
 
     // data controller
     var dataController: DataController!
@@ -123,7 +123,7 @@ class NotesViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddNewNote" {
-            if let vc = segue.destination as? AddNoteViewController {
+            if let vc = segue.destination as? AddTaskViewController {
                 vc.isEdit = false
                 vc.category = category
                 vc.dataController = dataController

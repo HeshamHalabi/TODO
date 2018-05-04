@@ -122,7 +122,7 @@ class CategoryViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? NotesViewController {
+        if let vc = segue.destination as? TaskViewController {
             if let selectedIndex = tableView.indexPathForSelectedRow {
                 vc.category = category[selectedIndex.row]
                 // TODO: pass core data reference

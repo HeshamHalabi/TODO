@@ -19,10 +19,10 @@
 		54743CA9209C509B00D470EA /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54743CA5209C509B00D470EA /* Category+CoreDataClass.swift */; };
 		54743CAA209C509B00D470EA /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54743CA6209C509B00D470EA /* Category+CoreDataProperties.swift */; };
 		54743CAD209C56C500D470EA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54743CAC209C56C500D470EA /* DataController.swift */; };
-		54D6F8202099994300408627 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F81F2099994300408627 /* AddNoteViewController.swift */; };
+		54D6F8202099994300408627 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F81F2099994300408627 /* AddTaskViewController.swift */; };
 		54D6F8242099A03700408627 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8232099A03700408627 /* Note.swift */; };
 		54D6F8262099C39B00408627 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8252099C39B00408627 /* CategoryViewController.swift */; };
-		54D6F8282099C8CD00408627 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8272099C8CD00408627 /* NotesViewController.swift */; };
+		54D6F8282099C8CD00408627 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8272099C8CD00408627 /* TaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,10 +40,10 @@
 		54743CA5209C509B00D470EA /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		54743CA6209C509B00D470EA /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		54743CAC209C56C500D470EA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		54D6F81F2099994300408627 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddNoteViewController.swift; path = ../AddNoteViewController.swift; sourceTree = "<group>"; };
+		54D6F81F2099994300408627 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddTaskViewController.swift; path = ../AddTaskViewController.swift; sourceTree = "<group>"; };
 		54D6F8232099A03700408627 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		54D6F8252099C39B00408627 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		54D6F8272099C8CD00408627 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		54D6F8272099C8CD00408627 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +81,8 @@
 				54522E502091B7D8007E9B62 /* Main.storyboard */,
 				54743C9E209B88D000D470EA /* ShowTaskViewController.swift */,
 				54D6F8252099C39B00408627 /* CategoryViewController.swift */,
-				54D6F8272099C8CD00408627 /* NotesViewController.swift */,
-				54D6F81F2099994300408627 /* AddNoteViewController.swift */,
+				54D6F8272099C8CD00408627 /* TaskViewController.swift */,
+				54D6F81F2099994300408627 /* AddTaskViewController.swift */,
 				54522E532091B7D8007E9B62 /* Assets.xcassets */,
 				54522E552091B7D8007E9B62 /* LaunchScreen.storyboard */,
 				54522E582091B7D8007E9B62 /* Info.plist */,
@@ -181,8 +181,8 @@
 				54743CA7209C509B00D470EA /* Task+CoreDataClass.swift in Sources */,
 				54743CA9209C509B00D470EA /* Category+CoreDataClass.swift in Sources */,
 				54522E4F2091B7D8007E9B62 /* ViewController.swift in Sources */,
-				54D6F8282099C8CD00408627 /* NotesViewController.swift in Sources */,
-				54D6F8202099994300408627 /* AddNoteViewController.swift in Sources */,
+				54D6F8282099C8CD00408627 /* TaskViewController.swift in Sources */,
+				54D6F8202099994300408627 /* AddTaskViewController.swift in Sources */,
 				54522E4D2091B7D8007E9B62 /* AppDelegate.swift in Sources */,
 				54743CAA209C509B00D470EA /* Category+CoreDataProperties.swift in Sources */,
 				54D6F8242099A03700408627 /* Note.swift in Sources */,
