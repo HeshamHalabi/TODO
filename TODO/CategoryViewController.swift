@@ -28,7 +28,7 @@ class CategoryViewController: UITableViewController {
         
         // MARK: Adding and fetching from core data
         // add category
-//        addCategory()
+        addCategory()
         // fetch request
         let fetchRequest: NSFetchRequest<Category> = Category.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
@@ -122,7 +122,9 @@ class CategoryViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? TaskViewController {
+        if let splitVC = segue.destination as? SplitViewController,
+            let navigationController = splitVC.viewControllers[0] as? UINavigationController,
+        let vc = navigationController.viewControllers[0] as? TaskViewController {
             if let selectedIndex = tableView.indexPathForSelectedRow {
                 vc.category = category[selectedIndex.row]
                 // TODO: pass core data reference

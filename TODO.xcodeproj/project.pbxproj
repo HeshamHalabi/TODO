@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54320E0B20A2082000BC1DE7 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54320E0A20A2082000BC1DE7 /* SplitViewController.swift */; };
 		54522E4D2091B7D8007E9B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54522E4C2091B7D8007E9B62 /* AppDelegate.swift */; };
 		54522E4F2091B7D8007E9B62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54522E4E2091B7D8007E9B62 /* ViewController.swift */; };
 		54522E522091B7D8007E9B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54522E502091B7D8007E9B62 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54320E0A20A2082000BC1DE7 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		54522E492091B7D8007E9B62 /* TODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54522E4C2091B7D8007E9B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54522E4E2091B7D8007E9B62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				54522E4C2091B7D8007E9B62 /* AppDelegate.swift */,
 				54522E4E2091B7D8007E9B62 /* ViewController.swift */,
 				54522E502091B7D8007E9B62 /* Main.storyboard */,
+				54320E0A20A2082000BC1DE7 /* SplitViewController.swift */,
 				54743C9E209B88D000D470EA /* ShowTaskViewController.swift */,
 				54D6F8252099C39B00408627 /* CategoryViewController.swift */,
 				54D6F8272099C8CD00408627 /* TaskViewController.swift */,
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54D6F8262099C39B00408627 /* CategoryViewController.swift in Sources */,
+				54320E0B20A2082000BC1DE7 /* SplitViewController.swift in Sources */,
 				54743CA7209C509B00D470EA /* Task+CoreDataClass.swift in Sources */,
 				54743CA9209C509B00D470EA /* Category+CoreDataClass.swift in Sources */,
 				54522E4F2091B7D8007E9B62 /* ViewController.swift in Sources */,

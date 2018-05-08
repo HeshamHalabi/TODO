@@ -71,6 +71,11 @@ class TaskViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+   
+    @IBAction func returnToCategory(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -141,7 +146,7 @@ class TaskViewController: UITableViewController {
                 vc.dataController = dataController
             }
         } else if segue.identifier == "ShowNote" {
-            if let vc = segue.destination as? ShowTaskViewController {
+            if let navController = segue.destination as? UINavigationController, let vc = navController.viewControllers.last as? ShowTaskViewController {
                 if let selectedIndex = tableView.indexPathForSelectedRow {
                     vc.task = fetchedResultsController.object(at: selectedIndex)
                 }

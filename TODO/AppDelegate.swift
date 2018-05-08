@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let categotyViewController = navigationViewController.viewControllers[0] as! CategoryViewController
         categotyViewController.dataController = dataController
         
+       
+        
         
         return true
     }

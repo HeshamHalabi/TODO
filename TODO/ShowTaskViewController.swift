@@ -22,7 +22,9 @@ class ShowTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // navigation item buttom,  displayModeButtonItem
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            navigationItem.leftItemsSupplementBackButton = true
         
         // test reciving a note
         if let task = task {
@@ -47,9 +49,7 @@ class ShowTaskViewController: UIViewController {
     }
     
 
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
+    
     /*
     // MARK: - Navigation
 
