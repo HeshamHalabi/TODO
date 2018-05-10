@@ -19,10 +19,16 @@ class AddTaskViewController: UIViewController {
     // Add or Edit
     var isEdit = false
     
+    // item to edit
+    var taskToEdit: Task? 
+    
+
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var detailsTextView: UITextView!
+    @IBOutlet weak var dueDateSwitch: UISwitch!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     @IBOutlet weak var reminderDatePicker: UIDatePicker!
+    @IBOutlet weak var reminderDateSwitch: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +37,38 @@ class AddTaskViewController: UIViewController {
         // hide date picker
         dueDatePicker.isHidden = true
         reminderDatePicker.isHidden = true
+        
+        // check if editing
+        
+        if let task = taskToEdit {
+            // isEdit
+            isEdit = true
+            // category
+            category = task.category
+            // title
+            if let title = task.title {
+                titleTextField.text = title
+            }
+            // other optional fields
+            if let details = task.details {
+                detailsTextView.text = details
+            }
+            if let dueDate = task.dueDate {
+                dueDatePicker.isHidden = false
+                dueDateSwitch.isOn = true
+                dueDatePicker.date = dueDate as Date
+            }
+            if let reminderDate = task.reminderDate {
+                reminderDatePicker.isHidden = false
+                reminderDateSwitch.isOn = true
+                reminderDatePicker.date = reminderDate as Date
+            }
+        }
+        
+        // TODO: Set title of the bar
+        // set title
+//        title = isEdit ? "Edit Task" : "Add New Task"
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,9 +112,15 @@ class AddTaskViewController: UIViewController {
     @IBAction func done(_ sender: UIBarButtonItem) {
         // TODO: Create new note or save edits
         var newTask: Task?
-        if !isEdit, let title = titleTextField.text, !title.isEmpty {
+        if let title = titleTextField.text, !title.isEmpty {
             
-            newTask = Task(context: dataController.viewContext)
+            // create new or edit
+            if let task = taskToEdit {
+                newTask = task
+            } else {
+                newTask = Task(context: dataController.viewContext)
+            }
+            
             newTask?.category = category
             newTask?.title = title
             // get other fields
@@ -86,31 +130,21 @@ class AddTaskViewController: UIViewController {
             if !dueDatePicker.isHidden {
                 // TODO: check the effect of converting to NSDate
                 newTask?.dueDate = dueDatePicker.date as NSDate
+            } else {
+                // to remove previous dates
+                newTask?.dueDate = nil
             }
             if !reminderDatePicker.isHidden {
                 newTask?.reminderDate = reminderDatePicker.date as NSDate
+            } else {
+                // to remove previous dates
+                newTask?.reminderDate = nil
             }
             
             // TODO: Save changes in context and dismiss
             try? dataController.viewContext.save()
             dismiss(animated: true, completion: nil)
-            //
-//            // pass the new note to the Notes View Controller
-//            if let presentingVC = presentingViewController as? UITabBarController {
-//                if let navVC = presentingVC.viewControllers?[0] as? UINavigationController {
-//                    print("\(navVC.description)")
-//                    if let lastVC = navVC.viewControllers.last as? NotesViewController {
-//                        print("\(lastVC.description)")
-//                        // pass the new note
-//                        lastVC.newNote = newNote?.title
-//                        dismiss(animated: true, completion: nil)
-//                    }
-//                }
-//
-//            }
-            
-   
-            
+ 
         }
         
     }

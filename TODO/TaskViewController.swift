@@ -149,6 +149,8 @@ class TaskViewController: UITableViewController {
             if let navController = segue.destination as? UINavigationController, let vc = navController.viewControllers.last as? ShowTaskViewController {
                 if let selectedIndex = tableView.indexPathForSelectedRow {
                     vc.task = fetchedResultsController.object(at: selectedIndex)
+                    // passing dataController
+                    vc.dataController = dataController
                 }
             }
         }

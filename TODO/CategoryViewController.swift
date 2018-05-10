@@ -28,7 +28,7 @@ class CategoryViewController: UITableViewController {
         
         // MARK: Adding and fetching from core data
         // add category
-        addCategory()
+//        addCategory()
         // fetch request
         let fetchRequest: NSFetchRequest<Category> = Category.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
