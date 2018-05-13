@@ -394,8 +394,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ycH-bO-PTa">
-                                <rect key="frame" x="16" y="84" width="382" height="436.33333333333326"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ycH-bO-PTa">
+                                <rect key="frame" x="16" y="84" width="382" height="644"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IeU-XU-l6r" userLabel="title stack">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
@@ -448,8 +448,8 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-7Z-t26" userLabel="description stack">
-                                        <rect key="frame" x="0.0" y="179.99999999999997" width="382" height="256.33333333333326"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-7Z-t26" userLabel="description stack">
+                                        <rect key="frame" x="0.0" y="180" width="382" height="464"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcQ-4E-fTS">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
@@ -457,8 +457,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fCC-Xe-AW2">
-                                                <rect key="frame" x="0.0" y="30.333333333333314" width="382" height="226"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fCC-Xe-AW2">
+                                                <rect key="frame" x="0.0" y="30.333333333333314" width="382" height="433.66666666666669"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="IvX-SM-MQb"/>
@@ -478,6 +478,7 @@
                         <constraints>
                             <constraint firstItem="ycH-bO-PTa" firstAttribute="top" secondItem="MAt-D1-LB4" secondAttribute="top" constant="20" id="210-sj-S2y"/>
                             <constraint firstItem="ycH-bO-PTa" firstAttribute="leading" secondItem="MAt-D1-LB4" secondAttribute="leading" constant="16" id="YxX-mA-x5g"/>
+                            <constraint firstItem="MAt-D1-LB4" firstAttribute="bottom" secondItem="ycH-bO-PTa" secondAttribute="bottom" priority="999" constant="8" id="ieM-CX-shT"/>
                             <constraint firstItem="MAt-D1-LB4" firstAttribute="trailing" secondItem="ycH-bO-PTa" secondAttribute="trailing" constant="16" id="m9L-aa-JNP"/>
                             <constraint firstItem="MAt-D1-LB4" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ycH-bO-PTa" secondAttribute="bottom" constant="8" id="t5c-ml-vtE"/>
                         </constraints>
