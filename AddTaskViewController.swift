@@ -14,7 +14,7 @@ class AddTaskViewController: UIViewController {
     // data controller
     var dataController: DataController!
     
-    var category: Category!
+    var category: Category! 
     
     // Add or Edit
     var isEdit = false

@@ -240,6 +240,62 @@
             </objects>
             <point key="canvasLocation" x="-524" y="436"/>
         </scene>
+        <!--Add Category View Controller-->
+        <scene sceneID="zq6-nu-o13">
+            <objects>
+                <viewController id="ZbL-lj-bw6" customClass="AddCategoryViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oLN-BD-FML">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERX-yI-zlh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Add Category" id="Eg9-Pt-B9u">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="P33-tb-mFR">
+                                            <connections>
+                                                <action selector="cancel:" destination="ZbL-lj-bw6" id="18O-6a-zAb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hcU-UN-s0u">
+                                            <connections>
+                                                <action selector="done:" destination="ZbL-lj-bw6" id="pON-Od-H49"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k3B-0X-ZP0">
+                                <rect key="frame" x="90" y="124" width="269" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKg-XL-dxF">
+                                <rect key="frame" x="16" y="129" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ERX-yI-zlh" firstAttribute="trailing" secondItem="V2G-j8-egn" secondAttribute="trailing" id="AuP-mU-3Wi"/>
+                            <constraint firstItem="ERX-yI-zlh" firstAttribute="leading" secondItem="V2G-j8-egn" secondAttribute="leading" id="abF-bm-BZf"/>
+                            <constraint firstItem="ERX-yI-zlh" firstAttribute="top" secondItem="V2G-j8-egn" secondAttribute="top" id="zTF-s0-YpO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V2G-j8-egn"/>
+                    </view>
+                    <connections>
+                        <outlet property="categorTitleTextField" destination="k3B-0X-ZP0" id="Wby-lh-IIT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gv1-hA-Q8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1352.8" y="-637.33133433283365"/>
+        </scene>
         <!--Category-->
         <scene sceneID="otf-Lk-dEv">
             <objects>
@@ -276,7 +332,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Category" id="WUK-l8-VTD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="74N-L0-5bZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="74N-L0-5bZ">
+                            <connections>
+                                <segue destination="ZbL-lj-bw6" kind="presentation" identifier="AddCategory" id="2hx-xf-vOK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xkn-gB-SGg" userLabel="First Responder" sceneMemberID="firstResponder"/>

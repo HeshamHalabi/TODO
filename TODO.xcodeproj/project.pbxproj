@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542BF05C20A74D90000FDD52 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542BF05B20A74D90000FDD52 /* AddCategoryViewController.swift */; };
 		54320E0B20A2082000BC1DE7 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54320E0A20A2082000BC1DE7 /* SplitViewController.swift */; };
 		54522E4D2091B7D8007E9B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54522E4C2091B7D8007E9B62 /* AppDelegate.swift */; };
 		54522E4F2091B7D8007E9B62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54522E4E2091B7D8007E9B62 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		542BF05B20A74D90000FDD52 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		54320E0A20A2082000BC1DE7 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		54522E492091B7D8007E9B62 /* TODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54522E4C2091B7D8007E9B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				54320E0A20A2082000BC1DE7 /* SplitViewController.swift */,
 				54743C9E209B88D000D470EA /* ShowTaskViewController.swift */,
 				54D6F8252099C39B00408627 /* CategoryViewController.swift */,
+				542BF05B20A74D90000FDD52 /* AddCategoryViewController.swift */,
 				54D6F8272099C8CD00408627 /* TaskViewController.swift */,
 				54D6F81F2099994300408627 /* AddTaskViewController.swift */,
 				54522E532091B7D8007E9B62 /* Assets.xcassets */,
@@ -191,6 +194,7 @@
 				54743CAA209C509B00D470EA /* Category+CoreDataProperties.swift in Sources */,
 				54D6F8242099A03700408627 /* Note.swift in Sources */,
 				54743C9F209B88D000D470EA /* ShowTaskViewController.swift in Sources */,
+				542BF05C20A74D90000FDD52 /* AddCategoryViewController.swift in Sources */,
 				54743CA8209C509B00D470EA /* Task+CoreDataProperties.swift in Sources */,
 				54743CAD209C56C500D470EA /* DataController.swift in Sources */,
 				54743CA2209C487700D470EA /* TODO.xcdatamodeld in Sources */,

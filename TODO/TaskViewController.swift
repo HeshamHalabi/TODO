@@ -29,7 +29,7 @@ class TaskViewController: UITableViewController {
         // fetch request batch size
         fetchRequest.fetchBatchSize = 20
         
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.dataController.viewContext, sectionNameKeyPath: nil, cacheName: "Tasks")
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.dataController.viewContext, sectionNameKeyPath: nil, cacheName: "\(category)-tasks")
         
         fetchedResultsController.delegate = self
         return fetchedResultsController
@@ -69,12 +69,14 @@ class TaskViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    
 
    
     @IBAction func returnToCategory(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
