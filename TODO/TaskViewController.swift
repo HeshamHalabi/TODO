@@ -73,7 +73,11 @@ class TaskViewController: UITableViewController {
 
    
     @IBAction func returnToCategory(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+        // try to dismiss SplitVC
+        if let splitVC = splitViewController as? SplitViewController{
+            splitVC.dismissSplitView()
+        }
     }
     
     // MARK: - Table view data source

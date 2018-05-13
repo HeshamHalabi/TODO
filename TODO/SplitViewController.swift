@@ -17,6 +17,10 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
         super.viewDidLoad()
 
         delegate = self
+        
+        // display mode
+        self.preferredDisplayMode = .allVisible
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +31,11 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
     // MARK: UISplitViewControllerDelegate
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return collapseDetailViewController
+    }
+    
+    // dismiss split view
+    func dismissSplitView() {
+        dismiss(animated: true, completion: nil)
     }
     
     /*
