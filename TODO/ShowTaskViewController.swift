@@ -27,6 +27,8 @@ class ShowTaskViewController: UIViewController {
         // navigation item buttom,  displayModeButtonItem
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
             navigationItem.leftItemsSupplementBackButton = true
+        // right button item
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTask))
         
         // test reciving a note
         if let task = task {
@@ -35,8 +37,12 @@ class ShowTaskViewController: UIViewController {
         // filling the view with task data
         titleLabel?.text = task?.title
         if let details = task?.details {
-            descriptionTextView.text = details
-        }
+            descriptionTextView?.text = details
+            // height constraint
+            descriptionTextView.heightAnchor.constraint(greaterThanOrEqualToConstant: 120.0).isActive = true
+        } /* else {
+            descriptionTextView.isHidden = true
+        } */
         if let dueDate = task?.dueDate {
             dueDateLabel?.text = "\(dueDate)"
         }
@@ -51,8 +57,12 @@ class ShowTaskViewController: UIViewController {
     }
     
 
-    
-    
+    @objc
+    func editTask() {
+        // test
+        print("editTask tapped")
+        performSegue(withIdentifier: "EditTask", sender: self)
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
