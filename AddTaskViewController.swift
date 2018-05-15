@@ -127,14 +127,14 @@ class AddTaskViewController: UIViewController {
             if let details = detailsTextView.text {
                 newTask?.details = details
             }
-            if !dueDatePicker.isHidden {
+            if !dueDatePicker.isHidden, dueDateSwitch.isOn {
                 // TODO: check the effect of converting to NSDate
                 newTask?.dueDate = dueDatePicker.date as NSDate
             } else {
                 // to remove previous dates
                 newTask?.dueDate = nil
             }
-            if !reminderDatePicker.isHidden {
+            if !reminderDatePicker.isHidden, reminderDateSwitch.isOn {
                 newTask?.reminderDate = reminderDatePicker.date as NSDate
             } else {
                 // to remove previous dates
