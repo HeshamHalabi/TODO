@@ -39,133 +39,150 @@
                                 <rect key="frame" x="16" y="64" width="382" height="672"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o4C-h6-3sX">
-                                        <rect key="frame" x="0.0" y="16" width="382" height="829.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="16" width="382" height="799.33333333333337"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BYp-X6-860" userLabel="Title Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8gY-RP-rRY" userLabel="title &amp; details stack">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="286.33333333333331"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXR-V3-lNh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-OD-8fY">
-                                                        <rect key="frame" x="52.333333333333343" y="0.0" width="329.66666666666663" height="30"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Oq7-gb-hU3" userLabel="Details Stack">
-                                                <rect key="frame" x="0.0" y="50.000000000000014" width="382" height="246.33333333333337"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bw-ag-RQ5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SXX-GU-pGB">
-                                                        <rect key="frame" x="0.0" y="30.333333333333343" width="382" height="216"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="216" id="bXs-7v-U5V">
-                                                                <variation key="heightClass=compact" constant="162"/>
-                                                            </constraint>
-                                                        </constraints>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fCO-y1-ibz" userLabel="Due Date Stack">
-                                                <rect key="frame" x="0.0" y="316.33333333333331" width="382" height="246.66666666666669"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J69-2g-c50">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30.666666666666668"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BYp-X6-860" userLabel="Title Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-RK-PrW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80.333333333333329" height="30.666666666666668"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXR-V3-lNh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="oOB-lN-BJr">
-                                                                <rect key="frame" x="323" y="0.0" width="59" height="30.666666666666668"/>
-                                                                <subviews>
-                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A4f-K0-bQX">
-                                                                        <rect key="frame" x="5" y="-0.33333333333331439" width="51" height="31"/>
-                                                                        <color key="onTintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <connections>
-                                                                            <action selector="hideDueDatePicker:" destination="F4m-ER-vap" eventType="valueChanged" id="6VP-1M-avx"/>
-                                                                        </connections>
-                                                                    </switch>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="A4f-K0-bQX" secondAttribute="trailing" constant="5" id="7XC-Nc-RAq"/>
-                                                                    <constraint firstItem="A4f-K0-bQX" firstAttribute="leading" secondItem="oOB-lN-BJr" secondAttribute="leading" constant="5" id="HVp-8s-ecK"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="A4f-K0-bQX" secondAttribute="bottom" id="XvZ-fz-4Up"/>
-                                                                    <constraint firstItem="A4f-K0-bQX" firstAttribute="top" secondItem="oOB-lN-BJr" secondAttribute="top" id="qck-3U-oPq"/>
-                                                                </constraints>
-                                                            </view>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-OD-8fY">
+                                                                <rect key="frame" x="52.333333333333343" y="0.0" width="329.66666666666663" height="30"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
                                                         </subviews>
                                                     </stackView>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kKS-Wy-OKH">
-                                                        <rect key="frame" x="0.0" y="30.666666666666686" width="382" height="216"/>
-                                                        <date key="date" timeIntervalSinceReferenceDate="546935372.03869402">
-                                                            <!--2018-05-02 06:29:32 +0000-->
-                                                        </date>
-                                                    </datePicker>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y91-NX-Dhq" userLabel="Reminder Date Stack">
-                                                <rect key="frame" x="0.0" y="583" width="382" height="246.33333333333337"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WS2-Gp-dEP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30.333333333333332"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Oq7-gb-hU3" userLabel="Details Stack">
+                                                        <rect key="frame" x="0.0" y="40.000000000000014" width="382" height="246.33333333333337"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-wL-19F">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80.333333333333329" height="30.333333333333332"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bw-ag-RQ5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="DQe-Ym-9r4">
-                                                                <rect key="frame" x="323" y="0.0" width="59" height="30.333333333333332"/>
-                                                                <subviews>
-                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LXS-LK-1Dy">
-                                                                        <rect key="frame" x="5" y="-0.66666666666662877" width="51" height="31"/>
-                                                                        <color key="onTintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <connections>
-                                                                            <action selector="hideReminderDate:" destination="F4m-ER-vap" eventType="valueChanged" id="2BJ-k8-2Pj"/>
-                                                                        </connections>
-                                                                    </switch>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SXX-GU-pGB">
+                                                                <rect key="frame" x="0.0" y="30.333333333333343" width="382" height="216"/>
+                                                                <color key="backgroundColor" red="0.84034629000000005" green="0.91394325720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="LXS-LK-1Dy" firstAttribute="leading" secondItem="DQe-Ym-9r4" secondAttribute="leading" constant="5" id="LvI-wZ-UH3"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="LXS-LK-1Dy" secondAttribute="trailing" constant="5" id="MsN-Sf-C4E"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="LXS-LK-1Dy" secondAttribute="bottom" id="Xd6-9f-Lfk"/>
-                                                                    <constraint firstItem="LXS-LK-1Dy" firstAttribute="top" secondItem="DQe-Ym-9r4" secondAttribute="top" id="wYP-MW-xYD"/>
+                                                                    <constraint firstAttribute="height" priority="999" constant="216" id="bXs-7v-U5V">
+                                                                        <variation key="heightClass=compact" constant="162"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="216" id="v1d-Ob-a4g"/>
                                                                 </constraints>
-                                                            </view>
+                                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="bXs-7v-U5V"/>
+                                                                    </mask>
+                                                                </variation>
+                                                            </textView>
                                                         </subviews>
                                                     </stackView>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZMN-ap-tmR">
-                                                        <rect key="frame" x="0.0" y="30.333333333333371" width="382" height="216"/>
-                                                        <date key="date" timeIntervalSinceReferenceDate="546935372.03869402">
-                                                            <!--2018-05-02 06:29:32 +0000-->
-                                                        </date>
-                                                    </datePicker>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-de-zeX" userLabel="date stack">
+                                                <rect key="frame" x="0.0" y="306.33333333333326" width="382" height="493"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fCO-y1-ibz" userLabel="Due Date Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="246.66666666666666"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J69-2g-c50">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="30.666666666666668"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-RK-PrW">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="80.333333333333329" height="30.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <view contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="oOB-lN-BJr">
+                                                                        <rect key="frame" x="323" y="0.0" width="59" height="30.666666666666668"/>
+                                                                        <subviews>
+                                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A4f-K0-bQX">
+                                                                                <rect key="frame" x="5" y="-0.33333333333331439" width="51" height="31"/>
+                                                                                <color key="onTintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <connections>
+                                                                                    <action selector="hideDueDatePicker:" destination="F4m-ER-vap" eventType="valueChanged" id="6VP-1M-avx"/>
+                                                                                </connections>
+                                                                            </switch>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="A4f-K0-bQX" secondAttribute="trailing" constant="5" id="7XC-Nc-RAq"/>
+                                                                            <constraint firstItem="A4f-K0-bQX" firstAttribute="leading" secondItem="oOB-lN-BJr" secondAttribute="leading" constant="5" id="HVp-8s-ecK"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="A4f-K0-bQX" secondAttribute="bottom" id="XvZ-fz-4Up"/>
+                                                                            <constraint firstItem="A4f-K0-bQX" firstAttribute="top" secondItem="oOB-lN-BJr" secondAttribute="top" id="qck-3U-oPq"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kKS-Wy-OKH">
+                                                                <rect key="frame" x="0.0" y="30.666666666666686" width="382" height="216"/>
+                                                                <date key="date" timeIntervalSinceReferenceDate="546935372.03869402">
+                                                                    <!--2018-05-02 06:29:32 +0000-->
+                                                                </date>
+                                                            </datePicker>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y91-NX-Dhq" userLabel="Reminder Date Stack">
+                                                        <rect key="frame" x="0.0" y="246.66666666666669" width="382" height="246.33333333333331"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WS2-Gp-dEP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="30.333333333333332"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-wL-19F">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="122.66666666666667" height="30.333333333333332"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <view contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="DQe-Ym-9r4">
+                                                                        <rect key="frame" x="323" y="0.0" width="59" height="30.333333333333332"/>
+                                                                        <subviews>
+                                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LXS-LK-1Dy">
+                                                                                <rect key="frame" x="5" y="-0.66666666666662877" width="51" height="31"/>
+                                                                                <color key="onTintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <connections>
+                                                                                    <action selector="hideReminderDate:" destination="F4m-ER-vap" eventType="valueChanged" id="2BJ-k8-2Pj"/>
+                                                                                </connections>
+                                                                            </switch>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="LXS-LK-1Dy" firstAttribute="leading" secondItem="DQe-Ym-9r4" secondAttribute="leading" constant="5" id="LvI-wZ-UH3"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="LXS-LK-1Dy" secondAttribute="trailing" constant="5" id="MsN-Sf-C4E"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="LXS-LK-1Dy" secondAttribute="bottom" id="Xd6-9f-Lfk"/>
+                                                                            <constraint firstItem="LXS-LK-1Dy" firstAttribute="top" secondItem="DQe-Ym-9r4" secondAttribute="top" id="wYP-MW-xYD"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZMN-ap-tmR">
+                                                                <rect key="frame" x="0.0" y="30.333333333333371" width="382" height="216"/>
+                                                                <date key="date" timeIntervalSinceReferenceDate="546935372.03869402">
+                                                                    <!--2018-05-02 06:29:32 +0000-->
+                                                                </date>
+                                                            </datePicker>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <variation key="heightClass=regular-widthClass=regular" axis="horizontal" distribution="fillEqually"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
