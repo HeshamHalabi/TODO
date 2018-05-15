@@ -35,8 +35,8 @@ class AddTaskViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // hide date picker
-        dueDatePicker.isHidden = true
-        reminderDatePicker.isHidden = true
+        dueDatePicker.isEnabled = false
+        reminderDatePicker.isEnabled = false
         
         // check if editing
         
@@ -54,12 +54,12 @@ class AddTaskViewController: UIViewController {
                 detailsTextView.text = details
             }
             if let dueDate = task.dueDate {
-                dueDatePicker.isHidden = false
+                dueDatePicker.isEnabled = true
                 dueDateSwitch.isOn = true
                 dueDatePicker.date = dueDate as Date
             }
             if let reminderDate = task.reminderDate {
-                reminderDatePicker.isHidden = false
+                reminderDatePicker.isEnabled = true
                 reminderDateSwitch.isOn = true
                 reminderDatePicker.date = reminderDate as Date
             }
@@ -90,17 +90,17 @@ class AddTaskViewController: UIViewController {
     // hide/show date picker
     @IBAction func hideDueDatePicker(_ sender: UISwitch) {
         if sender.isOn {
-            dueDatePicker.isHidden = false
+            dueDatePicker.isEnabled = true
         } else {
-            dueDatePicker.isHidden = true
+            dueDatePicker.isEnabled = false
         }
     }
     
     @IBAction func hideReminderDate(_ sender: UISwitch) {
         if sender.isOn {
-            reminderDatePicker.isHidden = false
+            reminderDatePicker.isEnabled = true
         } else {
-            reminderDatePicker.isHidden = true
+            reminderDatePicker.isEnabled = false
         }
     }
     
@@ -127,14 +127,14 @@ class AddTaskViewController: UIViewController {
             if let details = detailsTextView.text {
                 newTask?.details = details
             }
-            if !dueDatePicker.isHidden, dueDateSwitch.isOn {
+            if dueDatePicker.isEnabled {
                 // TODO: check the effect of converting to NSDate
                 newTask?.dueDate = dueDatePicker.date as NSDate
             } else {
                 // to remove previous dates
                 newTask?.dueDate = nil
             }
-            if !reminderDatePicker.isHidden, reminderDateSwitch.isOn {
+            if reminderDatePicker.isEnabled {
                 newTask?.reminderDate = reminderDatePicker.date as NSDate
             } else {
                 // to remove previous dates
