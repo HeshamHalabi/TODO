@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TaskViewController: UITableViewController {
+class TaskViewController: UITableViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
 
     // data controller
     var dataController: DataController!
@@ -49,6 +49,9 @@ class TaskViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // custom transitions
+        navigationController?.delegate = self
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -150,6 +153,9 @@ class TaskViewController: UITableViewController {
                 vc.isEdit = false
                 vc.category = category
                 vc.dataController = dataController
+                
+                // transition
+                vc.transitioningDelegate = self
             }
         } else if segue.identifier == "ShowNote" {
             if let navController = segue.destination as? UINavigationController, let vc = navController.viewControllers.last as? ShowTaskViewController {
@@ -157,10 +163,30 @@ class TaskViewController: UITableViewController {
                     vc.task = fetchedResultsController.object(at: selectedIndex)
                     // passing dataController
                     vc.dataController = dataController
+                    
+                    
                 }
             }
         }
         
+    }
+    
+    // MARK: Custom Transitions
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CustomPresentAnimator()
+    }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CustomDismissAnimator()
+    }
+    // Navigation Controller
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let  customNavigationAnimator = CustomNavigationAnimator()
+        
+        if operation == .push {
+            customNavigationAnimator.pushing = true
+        }
+        
+        return customNavigationAnimator
     }
     
     // MARK: deinit
