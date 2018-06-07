@@ -11,10 +11,26 @@ import CoreData
 
 class DataController {
     
+    // try singelton to solve accessibility poblem in CoreData generated classes
+    static let shared = DataController(modelName: "TODO")
+    
     let persistentContainer: NSPersistentContainer
-    var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
-    }
+    
+    // main context
+    lazy var viewContext: NSManagedObjectContext = {
+        return self.persistentContainer.viewContext
+    }()
+    // cacheContext for uploading records
+    lazy var cacheContext: NSManagedObjectContext = {
+        return self.persistentContainer.newBackgroundContext()
+    }()
+    // updateContext for updating local records
+    lazy var updateContext: NSManagedObjectContext = {
+        let _updateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        _updateContext.parent = self.viewContext
+        return _updateContext
+    }()
+    
     
     init(modelName: String) {
         persistentContainer = NSPersistentContainer(name: modelName)
@@ -47,4 +63,156 @@ extension DataController {
             self.autoSaveViewController(interval: interval)
         }
     }
+    
+    // custom save for saving to CoreData and iCloud
+    func saveContext() {
+        
+        let insertedObjects = viewContext.insertedObjects
+        let modifiedObjects = viewContext.updatedObjects
+        let deletedRecordIDs = viewContext.deletedObjects.map { ($0 as! CloudKitManagedObject).cloudKitRecordID() }
+        
+        if viewContext.hasChanges {
+            do {
+                try viewContext.save()
+            } catch {
+                NSLog("Core Data SaveContext Error: \(error.localizedDescription)")
+            }
+            
+            let insertedObjectIDs = insertedObjects.map { $0.objectID }
+            let modifiedObjectIDs = modifiedObjects.map { $0.objectID }
+            
+            // MARK: upload changes to iCloud
+            CloudKitManager.shared.uploadChangedObjects(savedIDs: insertedObjectIDs + modifiedObjectIDs, deletedIDs: deletedRecordIDs ) {error in
+                
+                if let error = error {
+                    print("There is an error when saving to iCloud, ModifyRecordOperation : \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+    
+    func saveUpdateContext() {
+        // TODO: Save updateContext
+        do {
+            try DataController.shared.updateContext.save()
+        } catch {
+            print("Error saving updateContext")
+        }
+        
+    }
+    
+    func saveCacheContext() {
+        // TODO: save cachedContext
+        do {
+            try DataController.shared.cacheContext.save()
+        } catch {
+            print("Error saving cachedContext")
+        }
+    }
+    // fetch category
+    func fetchCategory(categoryName: String) -> Category? {
+        
+        // fetch request
+        let fetchRequest: NSFetchRequest<Category> = Category.fetchRequest()
+        let predicate = NSPredicate(format: "name == %@", categoryName)
+        fetchRequest.predicate = predicate
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        // perform request
+        let result = try! viewContext.fetch(fetchRequest)
+        
+        if result.count > 0 {
+            return result[0]
+        } else {
+            return nil
+        }
+        
+    }
+    
+    // MARK: retrieve object from core data
+    func retrieveObject(from recordName: String, context: NSManagedObjectContext) -> NSManagedObject? {
+        guard let dotIndex = recordName.characters.index(of: ".") else { return nil }
+        let entityName = recordName.substring(to: dotIndex)
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+
+        let predicate = NSPredicate(format: "recordName == %@", recordName)
+        fetchRequest.predicate = predicate
+//        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+//        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        var result = [NSManagedObject]()
+        
+        do {
+            result = try context.fetch(fetchRequest) as! [NSManagedObject]
+        } catch {
+            print("Error Fetching Request : \(error.localizedDescription)")
+        }
+        
+        if (result.count) > 0 {
+            
+            return result[0]
+        }
+        
+        return nil
+    }
+    
+    // fetch many objects
+    func retrieveObjects(from recordName: String, context: NSManagedObjectContext) -> [NSManagedObject]? {
+        guard let dotIndex = recordName.characters.index(of: ".") else { return nil }
+        let entityName = recordName.substring(to: dotIndex)
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        
+        let predicate = NSPredicate(format: "recordName == %@", recordName)
+        fetchRequest.predicate = predicate
+        //        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        //        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        var result = [NSManagedObject]()
+        
+        do {
+            result = try context.fetch(fetchRequest) as! [NSManagedObject]
+        } catch {
+            print("Error Fetching Request : \(error.localizedDescription)")
+        }
+        
+        if (result.count) > 0 {
+            
+            return result
+        }
+        
+        return nil
+    }
+    func retrieveObject(using objectID: NSManagedObjectID, context: NSManagedObjectContext) -> NSManagedObject? {
+        
+        // TODO: fetch object using id
+        let object = context.object(with: objectID)
+        
+        if !object.isFault {
+            return object
+        }
+        
+        return nil
+    }
+    
+    func fetchCachedObjects() -> [CachedRecord] {
+        
+        let context = DataController.shared.cacheContext
+        var objects: [NSManagedObject] = []
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CachedRecord")
+        do {
+            objects = try context.fetch(fetchRequest)
+            // test
+            print("Fetching Cached Records")
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        return objects as! [CachedRecord]
+    }
+    
+    
 }

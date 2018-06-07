@@ -35,8 +35,13 @@ class AddCategoryViewController: UIViewController {
             let newCategory = Category(context: dataController.viewContext)
             newCategory.name = title
             
+            // TODO: Prepare for cloudKit
+            newCategory.prepareForCloudKit()
+            newCategory.lastUpdate = Date() as NSDate
             // save context
-            try? dataController.viewContext.save()
+            // TODO : replace with saveContext
+            dataController.saveContext()
+//            try? dataController.viewContext.save()
             
             dismiss(animated: true, completion: nil)
         }

@@ -29,7 +29,7 @@ class TaskViewController: UITableViewController {
         // fetch request batch size
         fetchRequest.fetchBatchSize = 20
         
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.dataController.viewContext, sectionNameKeyPath: nil, cacheName: "\(category)-tasks")
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.dataController.viewContext, sectionNameKeyPath: nil, cacheName: "\(category.name)-tasks")
         
         fetchedResultsController.delegate = self
         return fetchedResultsController

@@ -117,8 +117,12 @@ class AddTaskViewController: UIViewController {
             // create new or edit
             if let task = taskToEdit {
                 newTask = task
+                newTask?.lastUpdate = Date() as! NSDate
             } else {
                 newTask = Task(context: dataController.viewContext)
+                //TODO: prepare for cloudkit and generate recordName and Record ID
+                newTask?.prepareForCloudKit()
+                newTask?.lastUpdate = Date() as! NSDate
             }
             
             newTask?.category = category
@@ -142,7 +146,9 @@ class AddTaskViewController: UIViewController {
             }
             
             // TODO: Save changes in context and dismiss
-            try? dataController.viewContext.save()
+            
+//            try? dataController.viewContext.save()
+            dataController.saveContext()
             dismiss(animated: true, completion: nil)
  
         }
