@@ -151,6 +151,16 @@ class AddTaskViewController: UIViewController {
             dataController.saveContext()
             dismiss(animated: true, completion: nil)
  
+        } else {
+            // TODO: animate title field
+            
+            titleTextField.center.x = titleTextField.center.x - 20.0
+            
+            UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 60, options: [.curveEaseInOut], animations: {
+                self.titleTextField.center.x = self.titleTextField.center.x + 20
+            }) { (_) in
+                // 
+            }
         }
         
     }

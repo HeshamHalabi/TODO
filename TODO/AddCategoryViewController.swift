@@ -44,6 +44,18 @@ class AddCategoryViewController: UIViewController {
 //            try? dataController.viewContext.save()
             
             dismiss(animated: true, completion: nil)
+            
+        } else {
+            // TODO: Animate the empty text field
+            
+            // before animation
+            categorTitleTextField.center.x = categorTitleTextField.center.x - 20.0
+            
+            UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 60, options: [.curveEaseInOut], animations: {
+                self.categorTitleTextField.center.x = self.categorTitleTextField.center.x + 10.0
+            }) { (_) in
+                // TODO : return to origin
+            }
         }
         
     }
