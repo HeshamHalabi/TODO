@@ -29,18 +29,18 @@ extension CloudKitManagedObject {
     }
     
     // create recordName and recordID
-    func prepareForCloudKit() {
+    public func prepareForCloudKit() {
         let uuid = UUID()
         recordName = recordType + "." + uuid.uuidString
         let _recordID = CKRecordID(recordName: recordName!, zoneID: customZone.zoneID)
         recordID = NSKeyedArchiver.archivedData(withRootObject: _recordID) as NSData
     }
     
-    func cloudKitRecord() -> CKRecord {
+    public func cloudKitRecord() -> CKRecord {
         return CKRecord(recordType: recordType, recordID: cloudKitRecordID())
     }
     
-    func cloudKitRecordID() -> CKRecordID {
+    public func cloudKitRecordID() -> CKRecordID {
         return NSKeyedUnarchiver.unarchiveObject(with: recordID! as Data) as! CKRecordID
     }
     

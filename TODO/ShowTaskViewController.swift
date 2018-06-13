@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreDataCloudKit
 
 class ShowTaskViewController: UIViewController {
 

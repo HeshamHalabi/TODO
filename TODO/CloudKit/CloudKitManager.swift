@@ -9,10 +9,10 @@
 import CloudKit
 import CoreData
 
-class CloudKitManager {
+public class CloudKitManager {
     
     // singelton object
-    static let shared = CloudKitManager()
+    public static let shared = CloudKitManager()
     // zone id
     public var zoneID: CKRecordZoneID?
     public var customeZone: CKRecordZone
@@ -40,7 +40,7 @@ class CloudKitManager {
     }
     
     // MARK: upload changes to iCloud
-    func uploadChangedObjects(savedIDs: [NSManagedObjectID]? , deletedIDs: [CKRecordID]?, completion: @escaping (Error?) -> Void) {
+    public func uploadChangedObjects(savedIDs: [NSManagedObjectID]? , deletedIDs: [CKRecordID]?, completion: @escaping (Error?) -> Void) {
         
         var fetchedObjects = [NSManagedObject]()
         var fetchedRecords = [CKRecord]()
@@ -119,7 +119,7 @@ class CloudKitManager {
     }
     
     // update local records
-    func updateLocalRecords(changedRecords: [CKRecord], deletedRecordIDs: [CKRecordID]) {
+    public func updateLocalRecords(changedRecords: [CKRecord], deletedRecordIDs: [CKRecordID]) {
         DataController.shared.updateContext.perform {
             let changedRecordNames = changedRecords.map { $0.recordID.recordName }
             let deletedRecordNames = deletedRecordIDs.map { $0.recordName }
@@ -133,7 +133,7 @@ class CloudKitManager {
     }
     
     //MARK: update records using fetched from iCloud
-    func updateObjects(for changedRecordNames: [String], changedRecords: [CKRecord] ) {
+    public func updateObjects(for changedRecordNames: [String], changedRecords: [CKRecord] ) {
         // TODO: fetch from core data
         for i in 0...changedRecordNames.count-1 {
             
@@ -165,7 +165,7 @@ class CloudKitManager {
     }
     
     // MARK: delete records using fetched records from iCloud
-    func deleteObjects(for deletedRecordNames: [String] ) {
+    public func deleteObjects(for deletedRecordNames: [String] ) {
         // TODO: fetch from CoreData then delete
         for deletedRecord in deletedRecordNames {
             if let object =  DataController.shared.retrieveObject(from: deletedRecord, context: DataController.shared.viewContext) {
@@ -175,7 +175,7 @@ class CloudKitManager {
     }
     
     // MARK: persist failed upload records
-    func persistUploadFailedRecords(recordNames: [String]) {
+    public func persistUploadFailedRecords(recordNames: [String]) {
         let cacheContext = DataController.shared.cacheContext
         cacheContext.perform {
             for name in recordNames {
@@ -187,7 +187,7 @@ class CloudKitManager {
         }
     }
     // MARK: Clear cacheRecords
-    func clearCachedRecords(recordNames: [String]) {
+    public func clearCachedRecords(recordNames: [String]) {
         let cacheContext = DataController.shared.cacheContext
         cacheContext.perform {
             for recordName in recordNames {
@@ -212,7 +212,7 @@ class CloudKitManager {
     // MARK: Save records to iCloud
     
     // TODO: Upload Failed Records
-    func uploadFailedRecords() {
+    public func uploadFailedRecords() {
         
         let cachedObjects = DataController.shared.fetchCachedObjects()
         var recordsToSave: [CKRecord] = []
@@ -245,7 +245,7 @@ class CloudKitManager {
     }
     
     // MARK: Modify Record Operation
-    func modifyRecordOperation(recordsToSave: [CKRecord], recordIDsToDelete: [CKRecordID]) {
+    public func modifyRecordOperation(recordsToSave: [CKRecord], recordIDsToDelete: [CKRecordID]) {
         
         let modifyRecordsOperation = CKModifyRecordsOperation(recordsToSave: recordsToSave, recordIDsToDelete: recordIDsToDelete)
         // block of operation

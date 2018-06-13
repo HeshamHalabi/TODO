@@ -9,23 +9,23 @@
 import Foundation
 import CoreData
 
-class DataController {
+public class DataController {
     
     // try singelton to solve accessibility poblem in CoreData generated classes
-    static let shared = DataController(modelName: "TODO")
+    public static let shared = DataController(modelName: "TODO")
     
     let persistentContainer: NSPersistentContainer
     
     // main context
-    lazy var viewContext: NSManagedObjectContext = {
+    public lazy var viewContext: NSManagedObjectContext = {
         return self.persistentContainer.viewContext
     }()
     // cacheContext for uploading records
-    lazy var cacheContext: NSManagedObjectContext = {
+    public lazy var cacheContext: NSManagedObjectContext = {
         return self.persistentContainer.newBackgroundContext()
     }()
     // updateContext for updating local records
-    lazy var updateContext: NSManagedObjectContext = {
+    public lazy var updateContext: NSManagedObjectContext = {
         let _updateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         _updateContext.parent = self.viewContext
         return _updateContext
@@ -36,7 +36,7 @@ class DataController {
         persistentContainer = NSPersistentContainer(name: modelName)
     }
     
-    func load(completion: (() -> Void)? = nil ) {
+    public func load(completion: (() -> Void)? = nil ) {
         persistentContainer.loadPersistentStores { (storeDescription, error) in
             guard error == nil else {
                 fatalError(error!.localizedDescription)
@@ -49,7 +49,7 @@ class DataController {
 
 extension DataController {
     
-    func autoSaveViewController(interval: TimeInterval = 30) {
+    public func autoSaveViewController(interval: TimeInterval = 30) {
         print("autoSaveContext")
         guard interval > 0 else {
             print("Can not use negative numbers as time interval")
@@ -65,7 +65,7 @@ extension DataController {
     }
     
     // custom save for saving to CoreData and iCloud
-    func saveContext() {
+    public func saveContext() {
         
         let insertedObjects = viewContext.insertedObjects
         let modifiedObjects = viewContext.updatedObjects
@@ -91,7 +91,7 @@ extension DataController {
         }
     }
     
-    func saveUpdateContext() {
+    public func saveUpdateContext() {
         // TODO: Save updateContext
         do {
             try DataController.shared.updateContext.save()
@@ -101,7 +101,7 @@ extension DataController {
         
     }
     
-    func saveCacheContext() {
+    public func saveCacheContext() {
         // TODO: save cachedContext
         do {
             try DataController.shared.cacheContext.save()
