@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="TodayWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sl8-Mb-21V">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="og6-9q-VgY" customClass="WidgetTableViewCell" customModule="TodayWidget" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="og6-9q-VgY" id="S0x-gj-bBQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jww-8n-Avq" userLabel="Check">
+                                                    <rect key="frame" x="8" y="9" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="WN9-ab-i9n"/>
+                                                        <constraint firstAttribute="width" constant="40" id="YD8-20-cVo"/>
+                                                    </constraints>
+                                                    <state key="normal" image="checked"/>
+                                                    <connections>
+                                                        <action selector="taskCompleted:" destination="og6-9q-VgY" eventType="touchUpInside" id="5m6-y3-lEY"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jr-OJ-NN6">
+                                                    <rect key="frame" x="272" y="9" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="crk-07-y8L"/>
+                                                        <constraint firstAttribute="width" constant="40" id="muF-Th-ezU"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Open" image="open"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oM-jn-def">
+                                                    <rect key="frame" x="56" y="19" width="208" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Jww-8n-Avq" firstAttribute="leading" secondItem="S0x-gj-bBQ" secondAttribute="leading" constant="8" id="2cq-CP-4ju"/>
+                                                <constraint firstItem="1jr-OJ-NN6" firstAttribute="leading" secondItem="4oM-jn-def" secondAttribute="trailing" constant="8" id="TWe-XI-upU"/>
+                                                <constraint firstAttribute="trailing" secondItem="1jr-OJ-NN6" secondAttribute="trailing" constant="8" id="aAC-Fz-IPp"/>
+                                                <constraint firstItem="1jr-OJ-NN6" firstAttribute="centerY" secondItem="S0x-gj-bBQ" secondAttribute="centerY" id="eyB-B9-sbv"/>
+                                                <constraint firstItem="4oM-jn-def" firstAttribute="centerY" secondItem="S0x-gj-bBQ" secondAttribute="centerY" id="s7B-OT-SeP"/>
+                                                <constraint firstItem="Jww-8n-Avq" firstAttribute="centerY" secondItem="S0x-gj-bBQ" secondAttribute="centerY" id="uhT-mm-1ey"/>
+                                                <constraint firstItem="4oM-jn-def" firstAttribute="leading" secondItem="Jww-8n-Avq" secondAttribute="trailing" constant="8" id="wMy-m1-tkI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="statusButton" destination="Jww-8n-Avq" id="v7V-Lk-XGb"/>
+                                            <outlet property="title" destination="4oM-jn-def" id="z8I-tI-jks"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="mQn-tA-h9t"/>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="gVK-C9-qfp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="Sl8-Mb-21V" secondAttribute="bottom" id="3FS-0Q-0HN"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Sl8-Mb-21V" secondAttribute="trailing" id="LD2-Vn-YZx"/>
+                            <constraint firstItem="Sl8-Mb-21V" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="Ned-yV-vlH"/>
+                            <constraint firstItem="Sl8-Mb-21V" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="fdI-0w-LLC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="250"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checked" width="50" height="50"/>
+        <image name="open" width="40" height="40"/>
+    </resources>
+</document>

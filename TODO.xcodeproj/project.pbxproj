@@ -20,6 +20,11 @@
 		5444EF0C20C91FE90015C1E2 /* CustomDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444EF0A20C91FE80015C1E2 /* CustomDismissAnimator.swift */; };
 		5444EF0D20C91FE90015C1E2 /* CustomPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444EF0B20C91FE90015C1E2 /* CustomPresentAnimator.swift */; };
 		5444EF1020C922610015C1E2 /* CustomNavigationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444EF0F20C922610015C1E2 /* CustomNavigationAnimator.swift */; };
+		54513CFA20D5488300C5EA20 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54513CF920D5488300C5EA20 /* NotificationCenter.framework */; };
+		54513CFD20D5488300C5EA20 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54513CFC20D5488300C5EA20 /* TodayViewController.swift */; };
+		54513D0020D5488300C5EA20 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54513CFE20D5488300C5EA20 /* MainInterface.storyboard */; };
+		54513D0420D5488300C5EA20 /* TodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 54513CF820D5488300C5EA20 /* TodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		54513D0A20D54A0A00C5EA20 /* WidgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54513D0920D54A0A00C5EA20 /* WidgetTableViewCell.swift */; };
 		54522E4D2091B7D8007E9B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54522E4C2091B7D8007E9B62 /* AppDelegate.swift */; };
 		54522E4F2091B7D8007E9B62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54522E4E2091B7D8007E9B62 /* ViewController.swift */; };
 		54522E522091B7D8007E9B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54522E502091B7D8007E9B62 /* Main.storyboard */; };
@@ -46,6 +51,13 @@
 			remoteGlobalIDString = 5442C7C920D02B5000753FD8;
 			remoteInfo = CoreDataCloudKit;
 		};
+		54513D0220D5488300C5EA20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54522E412091B7D8007E9B62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54513CF720D5488300C5EA20;
+			remoteInfo = TodayWidget;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +70,17 @@
 				5442C7D220D02B5000753FD8 /* CoreDataCloudKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54513D0820D5488300C5EA20 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				54513D0420D5488300C5EA20 /* TodayWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -73,6 +96,12 @@
 		5444EF0A20C91FE80015C1E2 /* CustomDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDismissAnimator.swift; sourceTree = "<group>"; };
 		5444EF0B20C91FE90015C1E2 /* CustomPresentAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimator.swift; sourceTree = "<group>"; };
 		5444EF0F20C922610015C1E2 /* CustomNavigationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationAnimator.swift; sourceTree = "<group>"; };
+		54513CF820D5488300C5EA20 /* TodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		54513CF920D5488300C5EA20 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		54513CFC20D5488300C5EA20 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		54513CFF20D5488300C5EA20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		54513D0120D5488300C5EA20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54513D0920D54A0A00C5EA20 /* WidgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTableViewCell.swift; sourceTree = "<group>"; };
 		54522E492091B7D8007E9B62 /* TODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54522E4C2091B7D8007E9B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54522E4E2091B7D8007E9B62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +137,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		54513CF520D5488300C5EA20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54513CFA20D5488300C5EA20 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54522E462091B7D8007E9B62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,11 +176,23 @@
 			path = "Custom Transitions";
 			sourceTree = "<group>";
 		};
+		54513CFB20D5488300C5EA20 /* TodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				54513CFC20D5488300C5EA20 /* TodayViewController.swift */,
+				54513CFE20D5488300C5EA20 /* MainInterface.storyboard */,
+				54513D0920D54A0A00C5EA20 /* WidgetTableViewCell.swift */,
+				54513D0120D5488300C5EA20 /* Info.plist */,
+			);
+			path = TodayWidget;
+			sourceTree = "<group>";
+		};
 		54522E402091B7D8007E9B62 = {
 			isa = PBXGroup;
 			children = (
 				54522E4B2091B7D8007E9B62 /* TODO */,
 				5442C7CB20D02B5000753FD8 /* CoreDataCloudKit */,
+				54513CFB20D5488300C5EA20 /* TodayWidget */,
 				54522E4A2091B7D8007E9B62 /* Products */,
 				54FD3F3F20BC64D1002C71F0 /* Frameworks */,
 				B6799C7BE7E2B14F88DF8F36 /* Pods */,
@@ -155,6 +204,7 @@
 			children = (
 				54522E492091B7D8007E9B62 /* TODO.app */,
 				5442C7CA20D02B5000753FD8 /* CoreDataCloudKit.framework */,
+				54513CF820D5488300C5EA20 /* TodayWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +262,7 @@
 			children = (
 				54FD3F4020BC64D1002C71F0 /* CloudKit.framework */,
 				16BBE5605B22C07CEEC475F9 /* Pods_TODO.framework */,
+				54513CF920D5488300C5EA20 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -257,6 +308,23 @@
 			productReference = 5442C7CA20D02B5000753FD8 /* CoreDataCloudKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		54513CF720D5488300C5EA20 /* TodayWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54513D0720D5488300C5EA20 /* Build configuration list for PBXNativeTarget "TodayWidget" */;
+			buildPhases = (
+				54513CF420D5488300C5EA20 /* Sources */,
+				54513CF520D5488300C5EA20 /* Frameworks */,
+				54513CF620D5488300C5EA20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayWidget;
+			productName = TodayWidget;
+			productReference = 54513CF820D5488300C5EA20 /* TodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		54522E482091B7D8007E9B62 /* TODO */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54522E5B2091B7D8007E9B62 /* Build configuration list for PBXNativeTarget "TODO" */;
@@ -268,11 +336,13 @@
 				35A9A9B1B151E784F497BF02 /* [CP] Embed Pods Frameworks */,
 				6819F248F22CC2DAC4E82EE0 /* [CP] Copy Pods Resources */,
 				5442C7D620D02B5000753FD8 /* Embed Frameworks */,
+				54513D0820D5488300C5EA20 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				5442C7D020D02B5000753FD8 /* PBXTargetDependency */,
+				54513D0320D5488300C5EA20 /* PBXTargetDependency */,
 			);
 			name = TODO;
 			productName = TODO;
@@ -285,12 +355,16 @@
 		54522E412091B7D8007E9B62 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Hesham Al-Halabi";
 				TargetAttributes = {
 					5442C7C920D02B5000753FD8 = {
 						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+					};
+					54513CF720D5488300C5EA20 = {
+						CreatedOnToolsVersion = 9.4.1;
 						ProvisioningStyle = Automatic;
 					};
 					54522E482091B7D8007E9B62 = {
@@ -319,6 +393,7 @@
 			targets = (
 				54522E482091B7D8007E9B62 /* TODO */,
 				5442C7C920D02B5000753FD8 /* CoreDataCloudKit */,
+				54513CF720D5488300C5EA20 /* TodayWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +403,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54513CF620D5488300C5EA20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54513D0020D5488300C5EA20 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +495,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		54513CF420D5488300C5EA20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54513CFD20D5488300C5EA20 /* TodayViewController.swift in Sources */,
+				54513D0A20D54A0A00C5EA20 /* WidgetTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54522E452091B7D8007E9B62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,9 +531,22 @@
 			target = 5442C7C920D02B5000753FD8 /* CoreDataCloudKit */;
 			targetProxy = 5442C7CF20D02B5000753FD8 /* PBXContainerItemProxy */;
 		};
+		54513D0320D5488300C5EA20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54513CF720D5488300C5EA20 /* TodayWidget */;
+			targetProxy = 54513D0220D5488300C5EA20 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		54513CFE20D5488300C5EA20 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54513CFF20D5488300C5EA20 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		54522E502091B7D8007E9B62 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -514,6 +619,44 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		54513D0520D5488300C5EA20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4T2QW73X33;
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eng.Hesham.TODO.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		54513D0620D5488300C5EA20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4T2QW73X33;
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eng.Hesham.TODO.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -668,6 +811,15 @@
 			buildConfigurations = (
 				5442C7D420D02B5000753FD8 /* Debug */,
 				5442C7D520D02B5000753FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54513D0720D5488300C5EA20 /* Build configuration list for PBXNativeTarget "TodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54513D0520D5488300C5EA20 /* Debug */,
+				54513D0620D5488300C5EA20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
