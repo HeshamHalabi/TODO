@@ -16,13 +16,13 @@ class TaskViewController: UITableViewController, UIViewControllerTransitioningDe
     var dataController: DataController!
     
     // category
-    var category: Category!
+    var category: TaskCategory!
     
     // MARK: fetchedResultsController
     lazy var fetchedResultsController: NSFetchedResultsController<Task> = {
         // fetch request
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        let predicate = NSPredicate(format: "category == %@", category)
+        let predicate = NSPredicate(format: "taskCategory == %@", category)
         fetchRequest.predicate = predicate
         // sort descriptors
         let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)

@@ -16,9 +16,9 @@ class CategoryViewController: UITableViewController {
     var dataController: DataController!
     
     // MARK: fetchedResultsController
-    lazy var fetchedResultsController: NSFetchedResultsController<Category> = {
+    lazy var fetchedResultsController: NSFetchedResultsController<TaskCategory> = {
         // fetch request
-        let fetchRequest: NSFetchRequest<Category> = Category.fetchRequest()
+        let fetchRequest: NSFetchRequest<TaskCategory> = TaskCategory.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         // fetch request batch size

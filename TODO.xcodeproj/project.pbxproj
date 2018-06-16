@@ -16,12 +16,6 @@
 		5442C7D720D02B8A00753FD8 /* CloudKitManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD3F2F20B5AAC5002C71F0 /* CloudKitManagedObject.swift */; };
 		5442C7D820D02B8A00753FD8 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD3F3220B5AB48002C71F0 /* CloudKitManager.swift */; };
 		5442C7D920D02B8A00753FD8 /* CKErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD3F3C20B80386002C71F0 /* CKErrorExtension.swift */; };
-		5442C7DA20D02B9300753FD8 /* CachedRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD3F3820B6D5AD002C71F0 /* CachedRecord+CoreDataClass.swift */; };
-		5442C7DB20D02B9300753FD8 /* CachedRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD3F3920B6D5AD002C71F0 /* CachedRecord+CoreDataProperties.swift */; };
-		5442C7DC20D02B9300753FD8 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD3F2720B5AA80002C71F0 /* Task+CoreDataClass.swift */; };
-		5442C7DD20D02B9300753FD8 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD3F2820B5AA80002C71F0 /* Task+CoreDataProperties.swift */; };
-		5442C7DE20D02B9300753FD8 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD3F2920B5AA80002C71F0 /* Category+CoreDataClass.swift */; };
-		5442C7DF20D02B9300753FD8 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD3F2A20B5AA80002C71F0 /* Category+CoreDataProperties.swift */; };
 		5442C7E020D02B9300753FD8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54743CAC209C56C500D470EA /* DataController.swift */; };
 		5444EF0C20C91FE90015C1E2 /* CustomDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444EF0A20C91FE80015C1E2 /* CustomDismissAnimator.swift */; };
 		5444EF0D20C91FE90015C1E2 /* CustomPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444EF0B20C91FE90015C1E2 /* CustomPresentAnimator.swift */; };
@@ -36,7 +30,12 @@
 		54D6F8262099C39B00408627 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8252099C39B00408627 /* CategoryViewController.swift */; };
 		54D6F8282099C8CD00408627 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8272099C8CD00408627 /* TaskViewController.swift */; };
 		54FD3F4120BC64D1002C71F0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FD3F4020BC64D1002C71F0 /* CloudKit.framework */; };
-		ED48501E6C61D60061C11622 /* Pods_TODO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BBE5605B22C07CEEC475F9 /* Pods_TODO.framework */; };
+		54FF339A20D5401D00B34249 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339220D53E5A00B34249 /* Task+CoreDataClass.swift */; };
+		54FF339B20D5401D00B34249 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339320D53E5A00B34249 /* Task+CoreDataProperties.swift */; };
+		54FF339C20D5416200B34249 /* TaskCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF338E20D53E5A00B34249 /* TaskCategory+CoreDataClass.swift */; };
+		54FF339D20D5416200B34249 /* TaskCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF338F20D53E5A00B34249 /* TaskCategory+CoreDataProperties.swift */; };
+		54FF339E20D5422300B34249 /* CachedRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339020D53E5A00B34249 /* CachedRecord+CoreDataClass.swift */; };
+		54FF339F20D5422300B34249 /* CachedRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339120D53E5A00B34249 /* CachedRecord+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,17 +85,17 @@
 		54743CAC209C56C500D470EA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		54D6F8252099C39B00408627 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		54D6F8272099C8CD00408627 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
-		54FD3F2720B5AA80002C71F0 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		54FD3F2820B5AA80002C71F0 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		54FD3F2920B5AA80002C71F0 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
-		54FD3F2A20B5AA80002C71F0 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		54FD3F2F20B5AAC5002C71F0 /* CloudKitManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManagedObject.swift; sourceTree = "<group>"; };
 		54FD3F3220B5AB48002C71F0 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
-		54FD3F3820B6D5AD002C71F0 /* CachedRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
-		54FD3F3920B6D5AD002C71F0 /* CachedRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		54FD3F3C20B80386002C71F0 /* CKErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKErrorExtension.swift; sourceTree = "<group>"; };
 		54FD3F3E20BC64C8002C71F0 /* TODO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TODO.entitlements; sourceTree = "<group>"; };
 		54FD3F4020BC64D1002C71F0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		54FF338E20D53E5A00B34249 /* TaskCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskCategory+CoreDataClass.swift"; path = "../../TaskCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		54FF338F20D53E5A00B34249 /* TaskCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskCategory+CoreDataProperties.swift"; path = "../../TaskCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		54FF339020D53E5A00B34249 /* CachedRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CachedRecord+CoreDataClass.swift"; path = "../../CachedRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		54FF339120D53E5A00B34249 /* CachedRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CachedRecord+CoreDataProperties.swift"; path = "../../CachedRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		54FF339220D53E5A00B34249 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "../../Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		54FF339320D53E5A00B34249 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8E86AFDCD12B092059A49B31 /* Pods-TODO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TODO/Pods-TODO.debug.xcconfig"; sourceTree = "<group>"; };
 		DDE8AF16C94EA5BC4653DA2F /* Pods-TODO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO.release.xcconfig"; path = "Pods/Target Support Files/Pods-TODO/Pods-TODO.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,7 +113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				54FD3F4120BC64D1002C71F0 /* CloudKit.framework in Frameworks */,
-				ED48501E6C61D60061C11622 /* Pods_TODO.framework in Frameworks */,
 				5442C7D120D02B5000753FD8 /* CoreDataCloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,12 +185,12 @@
 		54743CAB209C50D800D470EA /* CoreData Model */ = {
 			isa = PBXGroup;
 			children = (
-				54FD3F3820B6D5AD002C71F0 /* CachedRecord+CoreDataClass.swift */,
-				54FD3F3920B6D5AD002C71F0 /* CachedRecord+CoreDataProperties.swift */,
-				54FD3F2720B5AA80002C71F0 /* Task+CoreDataClass.swift */,
-				54FD3F2820B5AA80002C71F0 /* Task+CoreDataProperties.swift */,
-				54FD3F2920B5AA80002C71F0 /* Category+CoreDataClass.swift */,
-				54FD3F2A20B5AA80002C71F0 /* Category+CoreDataProperties.swift */,
+				54FF338E20D53E5A00B34249 /* TaskCategory+CoreDataClass.swift */,
+				54FF338F20D53E5A00B34249 /* TaskCategory+CoreDataProperties.swift */,
+				54FF339220D53E5A00B34249 /* Task+CoreDataClass.swift */,
+				54FF339320D53E5A00B34249 /* Task+CoreDataProperties.swift */,
+				54FF339020D53E5A00B34249 /* CachedRecord+CoreDataClass.swift */,
+				54FF339120D53E5A00B34249 /* CachedRecord+CoreDataProperties.swift */,
 				54743CA0209C487700D470EA /* TODO.xcdatamodeld */,
 				54743CAC209C56C500D470EA /* DataController.swift */,
 			);
@@ -401,15 +399,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5442C7DA20D02B9300753FD8 /* CachedRecord+CoreDataClass.swift in Sources */,
-				5442C7DF20D02B9300753FD8 /* Category+CoreDataProperties.swift in Sources */,
-				5442C7DE20D02B9300753FD8 /* Category+CoreDataClass.swift in Sources */,
+				54FF339A20D5401D00B34249 /* Task+CoreDataClass.swift in Sources */,
 				5442C7D820D02B8A00753FD8 /* CloudKitManager.swift in Sources */,
-				5442C7DB20D02B9300753FD8 /* CachedRecord+CoreDataProperties.swift in Sources */,
+				54FF339D20D5416200B34249 /* TaskCategory+CoreDataProperties.swift in Sources */,
 				5442C7E020D02B9300753FD8 /* DataController.swift in Sources */,
+				54FF339F20D5422300B34249 /* CachedRecord+CoreDataProperties.swift in Sources */,
+				54FF339C20D5416200B34249 /* TaskCategory+CoreDataClass.swift in Sources */,
+				54FF339E20D5422300B34249 /* CachedRecord+CoreDataClass.swift in Sources */,
 				5442C7D920D02B8A00753FD8 /* CKErrorExtension.swift in Sources */,
-				5442C7DD20D02B9300753FD8 /* Task+CoreDataProperties.swift in Sources */,
-				5442C7DC20D02B9300753FD8 /* Task+CoreDataClass.swift in Sources */,
+				54FF339B20D5401D00B34249 /* Task+CoreDataProperties.swift in Sources */,
 				5442C7D720D02B8A00753FD8 /* CloudKitManagedObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

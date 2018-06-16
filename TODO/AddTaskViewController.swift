@@ -15,7 +15,7 @@ class AddTaskViewController: UIViewController {
     // data controller
     var dataController: DataController!
     
-    var category: Category! 
+    var category: TaskCategory!
     
     // Add or Edit
     var isEdit = false
@@ -45,7 +45,7 @@ class AddTaskViewController: UIViewController {
             // isEdit
             isEdit = true
             // category
-            category = task.category
+            category = task.taskCategory
             // title
             if let title = task.title {
                 titleTextField.text = title
@@ -126,7 +126,7 @@ class AddTaskViewController: UIViewController {
                 newTask?.lastUpdate = Date() as! NSDate
             }
             
-            newTask?.category = category
+            newTask?.taskCategory = category
             newTask?.title = title
             // get other fields
             if let details = detailsTextView.text {

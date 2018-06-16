@@ -33,7 +33,7 @@ class AddCategoryViewController: UIViewController {
         // TODO: Save category to Core Data
         if let title = categorTitleTextField.text, title.count > 0 {
             // create Category object and save
-            let newCategory = Category(context: dataController.viewContext)
+            let newCategory = TaskCategory(context: dataController.viewContext)
             newCategory.name = title
             
             // TODO: Prepare for cloudKit

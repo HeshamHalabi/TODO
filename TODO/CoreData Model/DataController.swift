@@ -110,10 +110,10 @@ extension DataController {
         }
     }
     // fetch category
-    func fetchCategory(categoryName: String) -> Category? {
+    func fetchCategory(categoryName: String) -> TaskCategory? {
         
         // fetch request
-        let fetchRequest: NSFetchRequest<Category> = Category.fetchRequest()
+        let fetchRequest: NSFetchRequest<TaskCategory> = TaskCategory.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", categoryName)
         fetchRequest.predicate = predicate
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
