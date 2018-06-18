@@ -39,14 +39,16 @@ class WidgetTableViewCell: UITableViewCell {
         
     }
     
-    @IBAction func taskCompleted(_ sender: UIButton) {
+    @IBAction func taskDone(_ sender: UIButton) {
         completed = true
         statusButton.setImage(#imageLiteral(resourceName: "checked"), for: .normal)
         // TODO: make changes to task - isDone
-        task.isDone = !task.isDone
+        task.isDone = true
+        print("task marked done")
         guard let managedContext = task.managedObjectContext else { return }
         do {
             try managedContext.save()
+            print("Changes saved to context!")
         } catch let error as NSError {
             fatalError("Error during core data save in Widget: \(error.localizedDescription)")
         }

@@ -64,6 +64,8 @@ class AddTaskViewController: UIViewController {
                 reminderDateSwitch.isOn = true
                 reminderDatePicker.date = reminderDate as Date
             }
+            
+            // TODO: add isDone
         }
         
         // TODO: Set title of the bar
@@ -128,6 +130,10 @@ class AddTaskViewController: UIViewController {
             
             newTask?.taskCategory = category
             newTask?.title = title
+            
+            // isDone
+            newTask?.isDone = false
+            
             // get other fields
             if let details = detailsTextView.text {
                 newTask?.details = details

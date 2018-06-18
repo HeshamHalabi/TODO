@@ -11,10 +11,57 @@ import CoreData
 
 public class DataController {
     
-    // try singelton to solve accessibility poblem in CoreData generated classes
-    public static let shared = DataController(modelName: "TODO")
     
-    let persistentContainer: NSPersistentContainer
+    
+    
+    // new methods
+    private let modelName: String
+    private static var sharedInstance: DataController!
+    
+    
+    // initializer
+    init(modelName: String) {
+        self.modelName = modelName
+//        persistentContainer = NSPersistentContainer(name: modelName)
+        DataController.sharedInstance = self
+        
+    }
+    
+    // try singelton to solve accessibility poblem in CoreData generated classes
+//    public static let shared = DataController(modelName: "TODO")
+    public static var shared: DataController {
+        if DataController.sharedInstance == nil {
+            print("DataController Shared created the first time!!!!")
+            sharedInstance = DataController(modelName: "TODO")
+            return sharedInstance
+        }
+        print("DataController Shared created before!")
+        return DataController.sharedInstance
+    }
+    
+    public lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: self.modelName)
+        
+        let directory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.heshamhalabi.todo")
+        
+        if let documentsDirectory = directory {
+            let url = documentsDirectory.appendingPathComponent("TODO.sqlite")
+            
+            let storeDescription = NSPersistentStoreDescription(url: url)
+            
+            container.persistentStoreDescriptions = [storeDescription]
+            
+            container.loadPersistentStores { (storeDescription, error) in
+                if let error = error as NSError? {
+                    fatalError("Unresolved error \(error), \(error.userInfo)")
+                }
+            }
+            
+            
+            return container
+        }
+        fatalError("Unable to access group documents directory")
+    }()
     
     // main context
     public lazy var viewContext: NSManagedObjectContext = {
@@ -32,18 +79,26 @@ public class DataController {
     }()
     
     
-    init(modelName: String) {
-        persistentContainer = NSPersistentContainer(name: modelName)
-    }
     
+    // MARK: load to be removed 
     public func load(completion: (() -> Void)? = nil ) {
-        persistentContainer.loadPersistentStores { (storeDescription, error) in
-            guard error == nil else {
-                fatalError(error!.localizedDescription)
-            }
-            // auto save context
-            self.autoSaveViewController()
-        }
+        
+//        if !DataController.isLoaded {
+//            // load persistent store
+//            persistentContainer.loadPersistentStores { (storeDescription, error) in
+//                guard error == nil else {
+//                    fatalError(error!.localizedDescription)
+//                }
+//
+//                // it is loaded now
+//                DataController.isLoaded = true
+//                // auto save context
+//                self.autoSaveViewController()
+//            }
+//        } else {
+//            print("!!!!!!Persistent Store loaded before!!!!!!!!")
+//        }
+        
     }
 }
 

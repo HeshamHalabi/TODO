@@ -23,10 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // load persistent store
-        dataController.load {
-            // update the main UI
-        }
+//        // load persistent store
+//        dataController.load {
+//            // update the main UI
+//        }
         
         // pass dataController to category controller
         let tabBarNavigationController = window?.rootViewController as! UITabBarController

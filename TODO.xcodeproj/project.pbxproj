@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43A1D5449384BBDE21D697B2 /* Pods_TodayWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE6E748508021D19B9EBDF6 /* Pods_TodayWidget.framework */; };
+		5404022C20D656E5000DC999 /* TODO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54743CA0209C487700D470EA /* TODO.xcdatamodeld */; };
+		5404022D20D65757000DC999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54522E532091B7D8007E9B62 /* Assets.xcassets */; };
 		542BF05C20A74D90000FDD52 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542BF05B20A74D90000FDD52 /* AddCategoryViewController.swift */; };
 		54320E0B20A2082000BC1DE7 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54320E0A20A2082000BC1DE7 /* SplitViewController.swift */; };
 		5442C7C420D029EE00753FD8 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442C7C320D029EE00753FD8 /* AddTaskViewController.swift */; };
@@ -41,6 +44,8 @@
 		54FF339D20D5416200B34249 /* TaskCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF338F20D53E5A00B34249 /* TaskCategory+CoreDataProperties.swift */; };
 		54FF339E20D5422300B34249 /* CachedRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339020D53E5A00B34249 /* CachedRecord+CoreDataClass.swift */; };
 		54FF339F20D5422300B34249 /* CachedRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339120D53E5A00B34249 /* CachedRecord+CoreDataProperties.swift */; };
+		678A6D0C22BBE4BDEDC68484 /* Pods_CoreDataCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482F3196970BBDBFAC6B98E1 /* Pods_CoreDataCloudKit.framework */; };
+		C55DF128E1B55275FF8F60C6 /* Pods_TODO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BBE5605B22C07CEEC475F9 /* Pods_TODO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +91,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06934A18A04A3B522628ED21 /* Pods-CoreDataCloudKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataCloudKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataCloudKit/Pods-CoreDataCloudKit.release.xcconfig"; sourceTree = "<group>"; };
+		0DE6E748508021D19B9EBDF6 /* Pods_TodayWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16BBE5605B22C07CEEC475F9 /* Pods_TODO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482F3196970BBDBFAC6B98E1 /* Pods_CoreDataCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		542BF05B20A74D90000FDD52 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		54320E0A20A2082000BC1DE7 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		5442C7C320D029EE00753FD8 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +120,7 @@
 		54743C9E209B88D000D470EA /* ShowTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTaskViewController.swift; sourceTree = "<group>"; };
 		54743CA1209C487700D470EA /* TODO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TODO.xcdatamodel; sourceTree = "<group>"; };
 		54743CAC209C56C500D470EA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		548B522F20D6544A00F96596 /* TodayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayWidget.entitlements; sourceTree = "<group>"; };
 		54D6F8252099C39B00408627 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		54D6F8272099C8CD00408627 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		54FD3F2F20B5AAC5002C71F0 /* CloudKitManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManagedObject.swift; sourceTree = "<group>"; };
@@ -126,7 +135,10 @@
 		54FF339220D53E5A00B34249 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "../../Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		54FF339320D53E5A00B34249 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8E86AFDCD12B092059A49B31 /* Pods-TODO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TODO/Pods-TODO.debug.xcconfig"; sourceTree = "<group>"; };
+		9CD6E1B0F425EB5CDC8B0E4A /* Pods-TodayWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayWidget/Pods-TodayWidget.debug.xcconfig"; sourceTree = "<group>"; };
+		B4515657E8B0D1725489C505 /* Pods-CoreDataCloudKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataCloudKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataCloudKit/Pods-CoreDataCloudKit.debug.xcconfig"; sourceTree = "<group>"; };
 		DDE8AF16C94EA5BC4653DA2F /* Pods-TODO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO.release.xcconfig"; path = "Pods/Target Support Files/Pods-TODO/Pods-TODO.release.xcconfig"; sourceTree = "<group>"; };
+		E93A3FB8A97D77C0E7B8A4BC /* Pods-TodayWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayWidget/Pods-TodayWidget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678A6D0C22BBE4BDEDC68484 /* Pods_CoreDataCloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54513CFA20D5488300C5EA20 /* NotificationCenter.framework in Frameworks */,
+				43A1D5449384BBDE21D697B2 /* Pods_TodayWidget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +165,7 @@
 			files = (
 				54FD3F4120BC64D1002C71F0 /* CloudKit.framework in Frameworks */,
 				5442C7D120D02B5000753FD8 /* CoreDataCloudKit.framework in Frameworks */,
+				C55DF128E1B55275FF8F60C6 /* Pods_TODO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +194,7 @@
 		54513CFB20D5488300C5EA20 /* TodayWidget */ = {
 			isa = PBXGroup;
 			children = (
+				548B522F20D6544A00F96596 /* TodayWidget.entitlements */,
 				54513CFC20D5488300C5EA20 /* TodayViewController.swift */,
 				54513CFE20D5488300C5EA20 /* MainInterface.storyboard */,
 				54513D0920D54A0A00C5EA20 /* WidgetTableViewCell.swift */,
@@ -263,6 +279,8 @@
 				54FD3F4020BC64D1002C71F0 /* CloudKit.framework */,
 				16BBE5605B22C07CEEC475F9 /* Pods_TODO.framework */,
 				54513CF920D5488300C5EA20 /* NotificationCenter.framework */,
+				482F3196970BBDBFAC6B98E1 /* Pods_CoreDataCloudKit.framework */,
+				0DE6E748508021D19B9EBDF6 /* Pods_TodayWidget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,6 +290,10 @@
 			children = (
 				8E86AFDCD12B092059A49B31 /* Pods-TODO.debug.xcconfig */,
 				DDE8AF16C94EA5BC4653DA2F /* Pods-TODO.release.xcconfig */,
+				B4515657E8B0D1725489C505 /* Pods-CoreDataCloudKit.debug.xcconfig */,
+				06934A18A04A3B522628ED21 /* Pods-CoreDataCloudKit.release.xcconfig */,
+				9CD6E1B0F425EB5CDC8B0E4A /* Pods-TodayWidget.debug.xcconfig */,
+				E93A3FB8A97D77C0E7B8A4BC /* Pods-TodayWidget.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -294,10 +316,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5442C7D320D02B5000753FD8 /* Build configuration list for PBXNativeTarget "CoreDataCloudKit" */;
 			buildPhases = (
+				B4056437B28598F6260F0F02 /* [CP] Check Pods Manifest.lock */,
 				5442C7C520D02B5000753FD8 /* Sources */,
 				5442C7C620D02B5000753FD8 /* Frameworks */,
 				5442C7C720D02B5000753FD8 /* Headers */,
 				5442C7C820D02B5000753FD8 /* Resources */,
+				401521FFE29B8109A5897489 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,9 +336,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54513D0720D5488300C5EA20 /* Build configuration list for PBXNativeTarget "TodayWidget" */;
 			buildPhases = (
+				6E9AC7821B52A3851B5EBB6A /* [CP] Check Pods Manifest.lock */,
 				54513CF420D5488300C5EA20 /* Sources */,
 				54513CF520D5488300C5EA20 /* Frameworks */,
 				54513CF620D5488300C5EA20 /* Resources */,
+				E0F01095CA9EEF9C7C8CF607 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,6 +392,11 @@
 					54513CF720D5488300C5EA20 = {
 						CreatedOnToolsVersion = 9.4.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					54522E482091B7D8007E9B62 = {
 						CreatedOnToolsVersion = 9.2;
@@ -410,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5404022D20D65757000DC999 /* Assets.xcassets in Resources */,
 				54513D0020D5488300C5EA20 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,13 +465,31 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TODO/Pods-TODO-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TODO/Pods-TODO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		401521FFE29B8109A5897489 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreDataCloudKit/Pods-CoreDataCloudKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		53C32322B1BAF4AB20AAA071 /* [CP] Check Pods Manifest.lock */ = {
@@ -475,6 +525,57 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TODO/Pods-TODO-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6E9AC7821B52A3851B5EBB6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayWidget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4056437B28598F6260F0F02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoreDataCloudKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0F01095CA9EEF9C7C8CF607 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodayWidget/Pods-TodayWidget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -500,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54513CFD20D5488300C5EA20 /* TodayViewController.swift in Sources */,
+				5404022C20D656E5000DC999 /* TODO.xcdatamodeld in Sources */,
 				54513D0A20D54A0A00C5EA20 /* WidgetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +670,7 @@
 /* Begin XCBuildConfiguration section */
 		5442C7D420D02B5000753FD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4515657E8B0D1725489C505 /* Pods-CoreDataCloudKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
@@ -596,6 +699,7 @@
 		};
 		5442C7D520D02B5000753FD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06934A18A04A3B522628ED21 /* Pods-CoreDataCloudKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
@@ -624,10 +728,12 @@
 		};
 		54513D0520D5488300C5EA20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CD6E1B0F425EB5CDC8B0E4A /* Pods-TodayWidget.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_ENTITLEMENTS = TodayWidget/TodayWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2QW73X33;
 				INFOPLIST_FILE = TodayWidget/Info.plist;
@@ -643,10 +749,12 @@
 		};
 		54513D0620D5488300C5EA20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E93A3FB8A97D77C0E7B8A4BC /* Pods-TodayWidget.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_ENTITLEMENTS = TodayWidget/TodayWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2QW73X33;
 				INFOPLIST_FILE = TodayWidget/Info.plist;

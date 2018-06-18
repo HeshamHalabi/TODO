@@ -35,9 +35,11 @@
                                                         <constraint firstAttribute="height" constant="40" id="WN9-ab-i9n"/>
                                                         <constraint firstAttribute="width" constant="40" id="YD8-20-cVo"/>
                                                     </constraints>
-                                                    <state key="normal" image="checked"/>
+                                                    <state key="normal" image="checked">
+                                                        <color key="titleColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
-                                                        <action selector="taskCompleted:" destination="og6-9q-VgY" eventType="touchUpInside" id="5m6-y3-lEY"/>
+                                                        <action selector="taskDone:" destination="og6-9q-VgY" eventType="touchUpInside" id="IsW-TU-d7m"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jr-OJ-NN6">
@@ -46,7 +48,9 @@
                                                         <constraint firstAttribute="height" constant="40" id="crk-07-y8L"/>
                                                         <constraint firstAttribute="width" constant="40" id="muF-Th-ezU"/>
                                                     </constraints>
-                                                    <state key="normal" title="Open" image="open"/>
+                                                    <state key="normal" title="Open" image="open">
+                                                        <color key="titleColor" red="0.84034629000000005" green="0.91394325720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oM-jn-def">
                                                     <rect key="frame" x="56" y="19" width="208" height="21"/>
@@ -66,15 +70,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="statusButton" destination="Jww-8n-Avq" id="v7V-Lk-XGb"/>
-                                            <outlet property="title" destination="4oM-jn-def" id="z8I-tI-jks"/>
+                                            <outlet property="statusButton" destination="Jww-8n-Avq" id="J8I-zY-4NN"/>
+                                            <outlet property="title" destination="4oM-jn-def" id="H3Y-46-cKB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="mQn-tA-h9t"/>
-                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="gVK-C9-qfp"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <constraints>
@@ -88,6 +88,9 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="250"/>
+                    <connections>
+                        <outlet property="tableView" destination="Sl8-Mb-21V" id="Adc-0a-osD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
