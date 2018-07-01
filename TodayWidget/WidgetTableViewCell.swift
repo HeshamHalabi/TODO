@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import CoreDataCloudKit
+import Flurry_iOS_SDK
 
 class WidgetTableViewCell: UITableViewCell {
     
@@ -45,13 +46,18 @@ class WidgetTableViewCell: UITableViewCell {
         // TODO: make changes to task - isDone
         task.isDone = true
         print("task marked done")
-        guard let managedContext = task.managedObjectContext else { return }
-        do {
-            try managedContext.save()
-            print("Changes saved to context!")
-        } catch let error as NSError {
-            fatalError("Error during core data save in Widget: \(error.localizedDescription)")
-        }
+        Flurry.logEvent("Done-Task")
+        
+        // save context
+        DataController.shared.saveContext()
+        
+//        guard let managedContext = task.managedObjectContext else { return }
+//        do {
+//            try managedContext.save()
+//            print("Changes saved to context!")
+//        } catch let error as NSError {
+//            fatalError("Error during core data save in Widget: \(error.localizedDescription)")
+//        }
     }
     
 }

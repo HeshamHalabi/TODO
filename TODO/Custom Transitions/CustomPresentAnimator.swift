@@ -10,7 +10,7 @@ import UIKit
 
 class CustomPresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 1.5
+        return 0.6
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -27,7 +27,7 @@ class CustomPresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         transitionContext.containerView.addSubview(toVC.view)
         
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             toVC.view.frame = toVCEndFrame
             fromVC.view.alpha = 0.5
         }) { (_) in

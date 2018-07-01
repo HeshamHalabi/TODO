@@ -1,0 +1,57 @@
+
+/* Class = "UILabel"; text = "Due Date :"; ObjectID = "0Es-RK-PrW"; */
+"0Es-RK-PrW.text" = "التاريخ النهائي";
+
+/* Class = "UILabel"; text = "Details :"; ObjectID = "1bw-ag-RQ5"; */
+"1bw-ag-RQ5.text" = "تفاصيل";
+
+/* Class = "UITabBarItem"; title = "Category"; ObjectID = "40V-sL-fts"; */
+"40V-sL-fts.title" = "الصنف";
+
+/* Class = "UILabel"; text = "Description :"; ObjectID = "AcQ-4E-fTS"; */
+"AcQ-4E-fTS.text" = "الوصف";
+
+/* Class = "UITabBarItem"; title = "Reminders"; ObjectID = "BOe-1t-vy5"; */
+"BOe-1t-vy5.title" = "تنبيهات";
+
+/* Class = "UILabel"; text = "Due Date :"; ObjectID = "Dty-Gr-15v"; */
+"Dty-Gr-15v.text" = "التاريخ النهائي";
+
+/* Class = "UINavigationItem"; title = "Add Category"; ObjectID = "Eg9-Pt-B9u"; */
+"Eg9-Pt-B9u.title" = "اضافة صنف";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JVN-8X-SB9"; */
+"JVN-8X-SB9.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Nti-qO-3JU"; */
+"Nti-qO-3JU.text" = "العنوان";
+
+/* Class = "UILabel"; text = "Reminder Date :"; ObjectID = "O5a-wL-19F"; */
+"O5a-wL-19F.text" = "تاريخ التذكير";
+
+/* Class = "UILabel"; text = "Title :"; ObjectID = "PKg-XL-dxF"; */
+"PKg-XL-dxF.text" = "العنوان";
+
+/* Class = "UILabel"; text = "Title :"; ObjectID = "S9j-ja-OR7"; */
+"S9j-ja-OR7.text" = "العنوان";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "SXX-GU-pGB"; */
+"SXX-GU-pGB.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UINavigationItem"; title = "Category"; ObjectID = "WUK-l8-VTD"; */
+"WUK-l8-VTD.title" = "الصنف";
+
+/* Class = "UINavigationItem"; title = "Notes"; ObjectID = "XoR-k0-6dj"; */
+"XoR-k0-6dj.title" = "ملاحظات";
+
+/* Class = "UINavigationItem"; title = "Reminders"; ObjectID = "agK-zz-rHl"; */
+"agK-zz-rHl.title" = "تنبيهات";
+
+/* Class = "UIBarButtonItem"; title = "Category"; ObjectID = "j7h-v4-ghb"; */
+"j7h-v4-ghb.title" = "الصنف";
+
+/* Class = "UILabel"; text = "Reminder Date :"; ObjectID = "vZQ-KQ-tzf"; */
+"vZQ-KQ-tzf.text" = "تاريخ التذكير";
+
+/* Class = "UILabel"; text = "Title :"; ObjectID = "wXR-V3-lNh"; */
+"wXR-V3-lNh.text" = "العنوان";

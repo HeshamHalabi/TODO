@@ -25,7 +25,7 @@ class CategoryViewController: UITableViewController {
         // fetch request batch size
         fetchRequest.fetchBatchSize = 20
         
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.dataController.viewContext, sectionNameKeyPath: nil, cacheName: "categories")
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.dataController.viewContext, sectionNameKeyPath: nil, cacheName: "TaskCategories")
         
         fetchedResultsController.delegate = self
         return fetchedResultsController
@@ -100,7 +100,8 @@ class CategoryViewController: UITableViewController {
             //TODO: Delete from CoreData
             let categoryToDelete = fetchedResultsController.object(at: indexPath)
             dataController.viewContext.delete(categoryToDelete)
-            try? dataController.viewContext.save()
+            dataController.saveContext()
+//            try? dataController.viewContext.save()
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

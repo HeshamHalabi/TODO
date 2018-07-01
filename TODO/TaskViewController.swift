@@ -97,11 +97,13 @@ class TaskViewController: UITableViewController, UIViewControllerTransitioningDe
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TaskCell
 
         let task = fetchedResultsController.object(at: indexPath)
         // Configure the cell
-        cell.textLabel?.text  = task.title
+//        cell.textLabel?.text  = task.title
+        
+        cell.task = task
         return cell
     }
     

@@ -31,6 +31,13 @@ class ShowTaskViewController: UIViewController {
         // right button item
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTask))
         
+        
+        // MARK: Date Formatter
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "en_US")
+//        print(dateFormatter.stringFromDate(date))
         // test reciving a note
         if let task = task {
             print("Successfully receiving a note: \(task.title)")
@@ -45,10 +52,12 @@ class ShowTaskViewController: UIViewController {
             descriptionTextView.isHidden = true
         } */
         if let dueDate = task?.dueDate {
-            dueDateLabel?.text = "\(dueDate)"
+//            dueDateLabel?.text = "\(dueDate)"
+            dueDateLabel.text = dateFormatter.string(from: dueDate as Date)
         }
         if let reminderDate = task?.reminderDate {
-            reminderDateLabel?.text = "\(reminderDate)"
+//            reminderDateLabel?.text = "\(reminderDate)"
+            reminderDateLabel.text = dateFormatter.string(from: reminderDate as Date)
         }
     }
 

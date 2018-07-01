@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import CoreDataCloudKit
+import Flurry_iOS_SDK
 
 class AddTaskViewController: UIViewController {
 
@@ -126,6 +127,10 @@ class AddTaskViewController: UIViewController {
                 //TODO: prepare for cloudkit and generate recordName and Record ID
                 newTask?.prepareForCloudKit()
                 newTask?.lastUpdate = Date() as! NSDate
+                
+                // adding new task
+                Flurry.logEvent("Added-Task")
+                print("Added New Task - Analytic performed!")
             }
             
             newTask?.taskCategory = category
@@ -163,7 +168,7 @@ class AddTaskViewController: UIViewController {
             
             titleTextField.center.x = titleTextField.center.x - 20.0
             
-            UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 60, options: [.curveEaseInOut], animations: {
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: [.curveEaseInOut], animations: {
                 self.titleTextField.center.x = self.titleTextField.center.x + 20
             }) { (_) in
                 // 

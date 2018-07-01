@@ -35,15 +35,19 @@
 		54522E572091B7D8007E9B62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54522E552091B7D8007E9B62 /* LaunchScreen.storyboard */; };
 		54743C9F209B88D000D470EA /* ShowTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54743C9E209B88D000D470EA /* ShowTaskViewController.swift */; };
 		54743CA2209C487700D470EA /* TODO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54743CA0209C487700D470EA /* TODO.xcdatamodeld */; };
+		5490897A20E3635A0038333A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490897820E362860038333A /* Reachability.swift */; };
+		5490897F20E405EE0038333A /* CachedRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490897B20E4058F0038333A /* CachedRecord+CoreDataClass.swift */; };
+		5490898020E405EE0038333A /* CachedRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490897C20E4058F0038333A /* CachedRecord+CoreDataProperties.swift */; };
 		54D6F8262099C39B00408627 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8252099C39B00408627 /* CategoryViewController.swift */; };
 		54D6F8282099C8CD00408627 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6F8272099C8CD00408627 /* TaskViewController.swift */; };
+		54EBA54E20E67F1100A4D3ED /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EBA54D20E67F1100A4D3ED /* TaskCell.swift */; };
+		54EBA55120E68CC000A4D3ED /* RemindersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EBA55020E68CC000A4D3ED /* RemindersController.swift */; };
+		54EBA55620E6C50000A4D3ED /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EBA55520E6C50000A4D3ED /* ReminderCell.swift */; };
 		54FD3F4120BC64D1002C71F0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FD3F4020BC64D1002C71F0 /* CloudKit.framework */; };
 		54FF339A20D5401D00B34249 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339220D53E5A00B34249 /* Task+CoreDataClass.swift */; };
 		54FF339B20D5401D00B34249 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339320D53E5A00B34249 /* Task+CoreDataProperties.swift */; };
 		54FF339C20D5416200B34249 /* TaskCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF338E20D53E5A00B34249 /* TaskCategory+CoreDataClass.swift */; };
 		54FF339D20D5416200B34249 /* TaskCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF338F20D53E5A00B34249 /* TaskCategory+CoreDataProperties.swift */; };
-		54FF339E20D5422300B34249 /* CachedRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339020D53E5A00B34249 /* CachedRecord+CoreDataClass.swift */; };
-		54FF339F20D5422300B34249 /* CachedRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF339120D53E5A00B34249 /* CachedRecord+CoreDataProperties.swift */; };
 		678A6D0C22BBE4BDEDC68484 /* Pods_CoreDataCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482F3196970BBDBFAC6B98E1 /* Pods_CoreDataCloudKit.framework */; };
 		C55DF128E1B55275FF8F60C6 /* Pods_TODO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BBE5605B22C07CEEC475F9 /* Pods_TODO.framework */; };
 /* End PBXBuildFile section */
@@ -121,8 +125,17 @@
 		54743CA1209C487700D470EA /* TODO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TODO.xcdatamodel; sourceTree = "<group>"; };
 		54743CAC209C56C500D470EA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		548B522F20D6544A00F96596 /* TodayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayWidget.entitlements; sourceTree = "<group>"; };
+		5490897820E362860038333A /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		5490897B20E4058F0038333A /* CachedRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5490897C20E4058F0038333A /* CachedRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		54D6F8252099C39B00408627 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		54D6F8272099C8CD00408627 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		54EBA54D20E67F1100A4D3ED /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		54EBA55020E68CC000A4D3ED /* RemindersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersController.swift; sourceTree = "<group>"; };
+		54EBA55220E6A3EB00A4D3ED /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		54EBA55320E6A3EB00A4D3ED /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		54EBA55420E6A3EC00A4D3ED /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		54EBA55520E6C50000A4D3ED /* ReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
 		54FD3F2F20B5AAC5002C71F0 /* CloudKitManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManagedObject.swift; sourceTree = "<group>"; };
 		54FD3F3220B5AB48002C71F0 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		54FD3F3C20B80386002C71F0 /* CKErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKErrorExtension.swift; sourceTree = "<group>"; };
@@ -130,8 +143,6 @@
 		54FD3F4020BC64D1002C71F0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		54FF338E20D53E5A00B34249 /* TaskCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskCategory+CoreDataClass.swift"; path = "../../TaskCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		54FF338F20D53E5A00B34249 /* TaskCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskCategory+CoreDataProperties.swift"; path = "../../TaskCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		54FF339020D53E5A00B34249 /* CachedRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CachedRecord+CoreDataClass.swift"; path = "../../CachedRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
-		54FF339120D53E5A00B34249 /* CachedRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CachedRecord+CoreDataProperties.swift"; path = "../../CachedRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		54FF339220D53E5A00B34249 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "../../Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		54FF339320D53E5A00B34249 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8E86AFDCD12B092059A49B31 /* Pods-TODO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TODO/Pods-TODO.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,12 +249,14 @@
 				542BF05B20A74D90000FDD52 /* AddCategoryViewController.swift */,
 				54D6F8272099C8CD00408627 /* TaskViewController.swift */,
 				5442C7C320D029EE00753FD8 /* AddTaskViewController.swift */,
+				54EBA55020E68CC000A4D3ED /* RemindersController.swift */,
 				54522E532091B7D8007E9B62 /* Assets.xcassets */,
 				54522E552091B7D8007E9B62 /* LaunchScreen.storyboard */,
 				54522E582091B7D8007E9B62 /* Info.plist */,
 				5444EF0E20C91FFE0015C1E2 /* Custom Transitions */,
 				54FD3F3120B5AAD2002C71F0 /* CloudKit */,
 				54743CAB209C50D800D470EA /* CoreData Model */,
+				54EBA54F20E67F2A00A4D3ED /* Cell */,
 			);
 			path = TODO;
 			sourceTree = "<group>";
@@ -251,16 +264,25 @@
 		54743CAB209C50D800D470EA /* CoreData Model */ = {
 			isa = PBXGroup;
 			children = (
+				5490897B20E4058F0038333A /* CachedRecord+CoreDataClass.swift */,
+				5490897C20E4058F0038333A /* CachedRecord+CoreDataProperties.swift */,
 				54FF338E20D53E5A00B34249 /* TaskCategory+CoreDataClass.swift */,
 				54FF338F20D53E5A00B34249 /* TaskCategory+CoreDataProperties.swift */,
 				54FF339220D53E5A00B34249 /* Task+CoreDataClass.swift */,
 				54FF339320D53E5A00B34249 /* Task+CoreDataProperties.swift */,
-				54FF339020D53E5A00B34249 /* CachedRecord+CoreDataClass.swift */,
-				54FF339120D53E5A00B34249 /* CachedRecord+CoreDataProperties.swift */,
 				54743CA0209C487700D470EA /* TODO.xcdatamodeld */,
 				54743CAC209C56C500D470EA /* DataController.swift */,
 			);
 			path = "CoreData Model";
+			sourceTree = "<group>";
+		};
+		54EBA54F20E67F2A00A4D3ED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				54EBA54D20E67F1100A4D3ED /* TaskCell.swift */,
+				54EBA55520E6C50000A4D3ED /* ReminderCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		54FD3F3120B5AAD2002C71F0 /* CloudKit */ = {
@@ -269,6 +291,7 @@
 				54FD3F2F20B5AAC5002C71F0 /* CloudKitManagedObject.swift */,
 				54FD3F3220B5AB48002C71F0 /* CloudKitManager.swift */,
 				54FD3F3C20B80386002C71F0 /* CKErrorExtension.swift */,
+				5490897820E362860038333A /* Reachability.swift */,
 			);
 			path = CloudKit;
 			sourceTree = "<group>";
@@ -321,7 +344,6 @@
 				5442C7C620D02B5000753FD8 /* Frameworks */,
 				5442C7C720D02B5000753FD8 /* Headers */,
 				5442C7C820D02B5000753FD8 /* Resources */,
-				401521FFE29B8109A5897489 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,7 +362,6 @@
 				54513CF420D5488300C5EA20 /* Sources */,
 				54513CF520D5488300C5EA20 /* Frameworks */,
 				54513CF620D5488300C5EA20 /* Resources */,
-				E0F01095CA9EEF9C7C8CF607 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,7 +381,6 @@
 				54522E462091B7D8007E9B62 /* Frameworks */,
 				54522E472091B7D8007E9B62 /* Resources */,
 				35A9A9B1B151E784F497BF02 /* [CP] Embed Pods Frameworks */,
-				6819F248F22CC2DAC4E82EE0 /* [CP] Copy Pods Resources */,
 				5442C7D620D02B5000753FD8 /* Embed Frameworks */,
 				54513D0820D5488300C5EA20 /* Embed App Extensions */,
 			);
@@ -402,6 +422,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};
@@ -466,30 +489,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TODO/Pods-TODO-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TODO/Pods-TODO-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		401521FFE29B8109A5897489 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreDataCloudKit/Pods-CoreDataCloudKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		53C32322B1BAF4AB20AAA071 /* [CP] Check Pods Manifest.lock */ = {
@@ -508,21 +522,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6819F248F22CC2DAC4E82EE0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TODO/Pods-TODO-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6E9AC7821B52A3851B5EBB6A /* [CP] Check Pods Manifest.lock */ = {
@@ -561,21 +560,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E0F01095CA9EEF9C7C8CF607 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodayWidget/Pods-TodayWidget-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -587,9 +571,10 @@
 				5442C7D820D02B8A00753FD8 /* CloudKitManager.swift in Sources */,
 				54FF339D20D5416200B34249 /* TaskCategory+CoreDataProperties.swift in Sources */,
 				5442C7E020D02B9300753FD8 /* DataController.swift in Sources */,
-				54FF339F20D5422300B34249 /* CachedRecord+CoreDataProperties.swift in Sources */,
 				54FF339C20D5416200B34249 /* TaskCategory+CoreDataClass.swift in Sources */,
-				54FF339E20D5422300B34249 /* CachedRecord+CoreDataClass.swift in Sources */,
+				5490898020E405EE0038333A /* CachedRecord+CoreDataProperties.swift in Sources */,
+				5490897A20E3635A0038333A /* Reachability.swift in Sources */,
+				5490897F20E405EE0038333A /* CachedRecord+CoreDataClass.swift in Sources */,
 				5442C7D920D02B8A00753FD8 /* CKErrorExtension.swift in Sources */,
 				54FF339B20D5401D00B34249 /* Task+CoreDataProperties.swift in Sources */,
 				5442C7D720D02B8A00753FD8 /* CloudKitManagedObject.swift in Sources */,
@@ -615,12 +600,15 @@
 				54522E4F2091B7D8007E9B62 /* ViewController.swift in Sources */,
 				54D6F8282099C8CD00408627 /* TaskViewController.swift in Sources */,
 				5444EF0D20C91FE90015C1E2 /* CustomPresentAnimator.swift in Sources */,
+				54EBA55120E68CC000A4D3ED /* RemindersController.swift in Sources */,
 				54522E4D2091B7D8007E9B62 /* AppDelegate.swift in Sources */,
 				5444EF1020C922610015C1E2 /* CustomNavigationAnimator.swift in Sources */,
 				54743C9F209B88D000D470EA /* ShowTaskViewController.swift in Sources */,
 				54743CA2209C487700D470EA /* TODO.xcdatamodeld in Sources */,
+				54EBA55620E6C50000A4D3ED /* ReminderCell.swift in Sources */,
 				5444EF0C20C91FE90015C1E2 /* CustomDismissAnimator.swift in Sources */,
 				5442C7C420D029EE00753FD8 /* AddTaskViewController.swift in Sources */,
+				54EBA54E20E67F1100A4D3ED /* TaskCell.swift in Sources */,
 				542BF05C20A74D90000FDD52 /* AddCategoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,6 +633,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				54513CFF20D5488300C5EA20 /* Base */,
+				54EBA55420E6A3EC00A4D3ED /* ar */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -653,6 +642,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				54522E512091B7D8007E9B62 /* Base */,
+				54EBA55220E6A3EB00A4D3ED /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -661,6 +651,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				54522E562091B7D8007E9B62 /* Base */,
+				54EBA55320E6A3EB00A4D3ED /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -672,10 +663,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B4515657E8B0D1725489C505 /* Pods-CoreDataCloudKit.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -687,8 +679,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eng.Hesham.CoreDataCloudKit;
+				PRODUCT_BUNDLE_IDENTIFIER = eng.HeshamAlHalabi.CoreDataCloudKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -701,10 +694,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06934A18A04A3B522628ED21 /* Pods-CoreDataCloudKit.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -716,8 +710,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eng.Hesham.CoreDataCloudKit;
+				PRODUCT_BUNDLE_IDENTIFIER = eng.HeshamAlHalabi.CoreDataCloudKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -734,13 +729,15 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_ENTITLEMENTS = TodayWidget/TodayWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2QW73X33;
 				INFOPLIST_FILE = TodayWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eng.Hesham.TODO.TodayWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = eng.HeshamAlHalabi.TODO.TodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -755,13 +752,15 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_ENTITLEMENTS = TodayWidget/TodayWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2QW73X33;
 				INFOPLIST_FILE = TodayWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eng.Hesham.TODO.TodayWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = eng.HeshamAlHalabi.TODO.TodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -772,6 +771,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -829,6 +829,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -882,12 +883,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TODO/TODO.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2QW73X33;
 				INFOPLIST_FILE = TODO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eng.Hesham.TODO;
+				PRODUCT_BUNDLE_IDENTIFIER = eng.HeshamAlHalabi.ToDoTaskApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -900,12 +904,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TODO/TODO.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2QW73X33;
 				INFOPLIST_FILE = TODO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eng.Hesham.TODO;
+				PRODUCT_BUNDLE_IDENTIFIER = eng.HeshamAlHalabi.ToDoTaskApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

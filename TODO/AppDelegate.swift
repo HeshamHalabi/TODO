@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import UserNotifications
+import CloudKit
 import CoreDataCloudKit
-
+import Flurry_iOS_SDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,10 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        // load persistent store
-//        dataController.load {
-//            // update the main UI
-//        }
+        Flurry.startSession("48HYWCVGFDDDC98YSGSV", with: FlurrySessionBuilder
+            .init()
+            .withCrashReporting(true)
+            .withLogLevel(FlurryLogLevelAll))
         
         // pass dataController to category controller
         let tabBarNavigationController = window?.rootViewController as! UITabBarController
@@ -70,6 +72,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Save view context
     func saveViewContext() {
         try? dataController.viewContext.save()
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        let dict = userInfo as! [String: NSObject]
+        let notificaiton = CKNotification(fromRemoteNotificationDictionary: dict)
+        
+        if notificaiton.subscriptionID! == CloudKitManager.subscriptionID {
+            CloudKitManager.shared.fetchCloudChanges()
+            completionHandler(.newData)
+        }
+        
     }
 }
 

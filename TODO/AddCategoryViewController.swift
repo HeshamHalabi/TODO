@@ -39,6 +39,7 @@ class AddCategoryViewController: UIViewController {
             // TODO: Prepare for cloudKit
             newCategory.prepareForCloudKit()
             newCategory.lastUpdate = Date() as NSDate
+            
             // save context
             // TODO : replace with saveContext
             dataController.saveContext()
@@ -52,7 +53,7 @@ class AddCategoryViewController: UIViewController {
             // before animation
             categorTitleTextField.center.x = categorTitleTextField.center.x - 20.0
             
-            UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 60, options: [.curveEaseInOut], animations: {
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 60, options: [.curveEaseInOut], animations: {
                 self.categorTitleTextField.center.x = self.categorTitleTextField.center.x + 10.0
             }) { (_) in
                 // TODO : return to origin
